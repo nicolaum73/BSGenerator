@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en-gb" data-lang-default="en-gb">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<title>Matching Questions</title>
+		<style>
+			html { font-size:20px; }
+		</style>
+	</head>
+	<body>
+	<h3>7.8 Matching Questions (MAT)</h3>
+	<p>Matching questions ask the student to match one or more questions with one
+	of a set of given answers. They require a few CSV definitions:
+	the possible answers (items appearing in drop-down boxes), the
+	questions (phrases for which a drop-down box item must be selected by the
+	student), and the definition of the correct question/answer associations.</p>
+
+	<p>The following is a simple example of a CSV file containing the definition
+	of a Matching question:</p>
+	<div style = 'text-align:center;'>
+		<iframe style = 'display: inline-block; width:80%;'
+		type="text/plain" src="../../templates/mat_2_Complete.txt"></iframe>
+	</div>
+
+	<p>The fields that can be specified are as follows:</p>
+	<table>
+		<tr style = 'vertical-align: top;'>
+			<th>Field</th><th>Mandatory</th><th>Description</th>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>questiontype</td>
+			<td style = 'text-align:center;'> x </td>
+			<td>Must be the first specified field. It states the type of the question.
+			"MAT", "Matching" or "Matching Question" are all accepted.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>title</td>
+			<td style = 'text-align:center;'> </td>
+			<td>The title of the question.
+			Defaults to "questiontitle".</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>weighting</td>
+			<td style = 'text-align:center;'> </td>
+			<td>The score of the question, between 0 and 9999. Defaults to 1.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>difficulty</td>
+			<td style = 'text-align:center;'> </td>
+			<td>The difficulty of the question (1-5).
+			Defaults to 1.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>isbonus</td>
+			<td style = 'text-align:center;'> </td>
+			<td>If this is a bonus question (yes) or not (no). Default no "no".</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>ismandatory</td>
+			<td style = 'text-align:center;'> </td>
+			<td>If this is a mandatory question (yes) or not (no). Default no "yes".</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>text</td>
+			<td style = 'text-align:center;'> x </td>
+			<td>The text of the question. Must be contained within
+			double quotes, if extending more than one line, or if containing commas.
+			Can include HTML formatting.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>image</td>
+			<td style = 'text-align:center;'> </td>
+			<td>Insert an image at the start of the question.
+			Specifies a single field, which is the image location.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>answer</td>
+			<td style = 'text-align:center;'> x </td>
+			<td>A possible answer to include in drop-down boxes;
+			at least one must be defined. It has two fields: the text that will appear
+			in the drop-down box, and an optional label to identify this answer
+			(defaults to 1), which can be used with the "question" field below.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>question</td>
+			<td style = 'text-align:center;'> x </td>
+			<td>Used to define a question to ask the student; at least one must
+			be defined. It requires two fields: the question text that will be
+			presented to the student, and the label of the correct choice, as
+			defined with an "answer" definition.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>score</td>
+			<td style = 'text-align:center;'> x </td>
+			<td>The scoring approach to use. A single field is
+			expected, with one of the following specifications:
+			<ul>
+				<li>"equal": the total points for the question are
+				equally distributed among each of the questions asked;</li>
+				<li>"all": all-or-nothing, i.e. the student must answer all
+				the questions correctly to receive the overall points assigned to
+				this question;</li>
+				<li>right-minus-wrong: same as "equal", but
+				with negative scoring; zero is the minimum score (e.g.if there
+				were four matching options, and one was correct and three
+				incorrect, the total score would be 0 points).</li>
+			</ul></td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>hint</td>
+			<td style = 'text-align:center;'> </td>
+			<td>A hint shown to the students when answering the
+			question in a quiz. Can include HTML formatting.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>feedback</td>
+			<td style = 'text-align:center;'> </td>
+			<td>Feedback to show to the students, when
+			visualising their test and answers after taking the test (it is
+			not shown during test taking). Can include HTML formatting.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>keyword</td>
+			<td style = 'text-align:center;'> </td>
+			<td>Defines a keyword. Can have an optional second
+			field with a value. These are not uploaded to Brightspace.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>keywords</td>
+			<td style = 'text-align:center;'> </td>
+			<td>Same as before, but several keywords can be
+			defined. No value will be associated with each keyword.</td>
+		</tr>
+	</table>
+	</body>
+</html>
+

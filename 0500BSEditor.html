@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en-gb" data-lang-default="en-gb">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<title>BSEditor</title>
+		<style>
+			html { font-size:20px; }
+		</style>
+	</head>
+	<body>
+	<h2>5. BSEditor</h2>
+	<p>BSEditor is the graphical-user interface to BSGenerator, responsible for
+	single question creation. In time, it will be integrated into a single
+	BSGenerator interface.</p>
+	<p>Its main application window application is composed of four main areas:
+	<ul>
+	<li>On the left side, the large text editor is the <b>Question Editor</b>,
+	where questions in the BSGenerator specific <a>CSV format</a> are loaded
+	and edited.
+	<li> On the right side, the <b>Question Preview</b> panel is a space
+	reserved for previewing how a question will appear to users in Brightspace.
+	<li> The <b>Log Display</b> panel (bottom right) displays information concerning
+	actions taken when using the application.
+	<li> Above the Question Editor and Question Preview sits the <b>Button Toolbar</b>,
+	which offers shortcut buttons for most of the application's functions.
+	</ul>
+	<p style = 'text-align:center;'>
+		<img style = 'display: inline-block; width:100%; height:auto' src = 'images/bseditor.png'/>
+	</p>
+	Further to these panels, a set of menus provides access to all the
+	functions offered by the application.
+
+	<h3 id = '5.1'>5.1 Question Editor</h3>
+	<p>This editor allows you to create, load, edit and save questions in
+	CSV format. You can have several files open, which will be organised with tabs.
+	The File, Edit and Question menus offer options related to the content of the
+	currently selected tab.</p>
+
+	<h3 id = '5.2'>5.2 Question Preview</h3>
+	<p>This area displays a preview of the question being edited, when that
+	function is activated (either through the menu Question / Preview, or
+	with the Preview button). This is a realistic approximation of the question
+	appearance in Brightspace. If more than one question variation is generated,
+	you can use the navigation buttons to switch between different variations.</p>
+	<p>It also shows which are the correct answers, the question feedback, and
+	the score the current answer will achieve. This is a dynamic display; try out
+	different question answers, and the score will automatically adjust.</p>
+
+	<h3 id = '5.3'>5.3 Log Display</h3>
+	<p>This area keeps track of most operations, along with the date and time at
+	which these were activated (the data is purely local). It is helpful when
+	compiling questions, to keep track of potential problems. It can be exported
+	into a text file, and its contents can be cleared at any time. These
+	functionalities are available through the Tools menu, or with the corresponding
+	shortcut buttons.</p>
+
+	<h3 id = '5.4'>5.4 Button Toolbar</h3>
+	<p style = 'text-align:center;'>
+		<img style = 'display: inline-block; width:100%;' src = 'images/button_toolbar.png'/>
+	</p>
+	The Button Toolbar provides shortcuts for all major functionalities. These
+	buttons implement the following functions (from left to right):
+	<ul>
+	<li>create a <b>New</b> (blank) question;
+	<li><b>Open</b> an existing question;
+	<li><b>Save</b> the current question;
+	<li><b>Save a Copy</b> of the current question;
+	<li><b>Import</b> a question from a QTI archive;
+	<li><b>Export</b> a question into a QTI archive;
+	<li><b>Undo</b> the last edit;
+	<li><b>Redo</b> a previously undone edit;
+	<li><b>Cut</b> text;
+	<li><b>Copy</b> text;
+	<li><b>Paste</b> text;
+	<li>choose the <b>Number of question variations</b> to generate;
+	<li><b>Preview</b> the question(s);
+	<li>display the generated <b>XML Code</b>;
+	<li>display the generated <b>CSV Code</b>;
+	<li>display the used <b>Python variables</b>;
+	<li><b>Export the Log</b> from the Log Display;
+	<li><b>Clear the Log</b> from the Log Display;
+	<li>edit the application's <b>Preferences</b>;
+	<li>open the <b>Help</b> window;
+	<li><b>Quit</b> the application.
+	</ul>
+	</body>
+</html>
+

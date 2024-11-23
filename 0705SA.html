@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en-gb" data-lang-default="en-gb">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<title>Short Answer Questions</title>
+		<style>
+			html { font-size:20px; }
+		</style>
+	</head>
+	<body>
+	<h3>7.5 Short Answer Questions (SA)</h3>
+	<p>Short Answer questions ask for one or more short
+	answers (textual or numeric). These are then compared to pre-defined
+	answers, for each blank.</p>
+
+	<p>In Brightspace, single blank short answer and multiple blank short answer
+	questions are somewhat different, even though they both are defined
+	under the same question type. Single blank present a single
+	text-entry box for the user to type their answer; the score for that answer
+	reflects the total score for the question. For multiple blank
+	questions, there are different scoring options.</p>
+
+	<p>Note that BSGenerator provides some extensions to the online-editor used
+	by Brightspace, for single blank questions, in that not-fully-correct answers
+	can be specified.</p>
+
+	<p>Multiple blank short answers defined through SA questions seem somewhat of an
+	after-thought in Brightspace, and are much better implemented either
+	through <a href = '0706MSA.html'>Multi Short Answer</a> or
+	<a href = '0707FIB.html'>Fill-in-the-Blanks</a> questions.</p>
+
+	<p>The following is a simple example of a CSV file containing the definition
+	of a Short Answer question:</p>
+	<div style = 'text-align:center;'>
+		<iframe style = 'display: inline-block; width:80%;'
+		type="text/plain" src="../../templates/sa_2_Complete.txt"></iframe>
+	</div>
+
+	<p>The fields that can be specified are as follows:</p>
+	<table>
+		<tr style = 'vertical-align: top;'>
+			<th>Field</th><th>Mandatory</th><th>Description</th>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>questiontype</td>
+			<td style = 'text-align:center;'> x </td>
+			<td>Must be the first specified field. It states the type of the question.
+			 "SA", "Short Answer", or "Short Answer Question" are all accepted.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>title</td>
+			<td style = 'text-align:center;'> </td>
+			<td>The title of the question.
+			Defaults to "questiontitle".</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>weighting</td>
+			<td style = 'text-align:center;'> </td>
+			<td>The score of the question, between 0 and 9999. Defaults to 1.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>difficulty</td>
+			<td style = 'text-align:center;'> </td>
+			<td>The difficulty of the question (1-5).
+			Defaults to 1.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>isbonus</td>
+			<td style = 'text-align:center;'> </td>
+			<td>If this is a bonus question (yes) or not (no). Default no "no".</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>ismandatory</td>
+			<td style = 'text-align:center;'> </td>
+			<td>If this is a mandatory question (yes) or not (no). Default no "yes".</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>text</td>
+			<td style = 'text-align:center;'> x </td>
+			<td>The text of the question. Must be contained within
+			double quotes, if extending more than one line, or if containing commas.
+			Can include HTML formatting.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>score</td>
+			<td style = 'text-align:center;'> </td>
+			<td>The scoring to use; defaults to "equal".
+			Must be set before specifying blanks or responses. Can be set to:
+			<ul>
+				<li>"equal": the question points are equally distributed among all
+				blanks (use this for single blank questions);</li>
+				<li>"all": all-or-nothing, i.e. the student must correctly
+				answer all the blanks to receive the full question marks.</li>
+			</ul></td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>blanks</td>
+			<td style = 'text-align:center;'> </td>
+			<td>The number of blanks: 1 (default, for single blank)
+			or more.<!-- Can be followed by number of columns and rows.--></td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>response</td>
+			<td style = 'text-align:center;'> x </td>
+			<td>A correct (or partially correct) answer. Must
+			define at least one. It specifies the score first, followed by the expected
+			response, and then the type of answer specified; an optional fourth field
+			defines the blank this response refers to (defaults to 1, i.e. the first blank).</br>
+			For single blank questions, the score is a percentage of the
+			total question points. For multiple blank questions, if the score is set to
+			"equal", then the response score must be set to <i>1/n</i> for <i>n</i> blanks
+			(e.g. 0.5 for two blanks); if the score is set to "all", then the
+			response scores must all be set to "0". The type can be:
+			<ul>
+				<li>"case": the response is case-sensitive;</li>
+				<li>"nocase": the response is not case-sensitive;</li>
+				<li>"regex": the response is a regular expression.</li>
+			</ul>
+			There is no limit to the number of responses given per blank.
+			If more than one response matches the given answer, the
+			first one declared is used.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>hint</td>
+			<td style = 'text-align:center;'> </td>
+			<td>A hint shown to the students when answering the
+			question in a quiz. Can include HTML formatting.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>feedback</td>
+			<td style = 'text-align:center;'> </td>
+			<td>Feedback to show to the students, when
+			visualising their test and answers after taking the test (it is
+			not shown during test taking). Can include HTML formatting.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>keyword</td>
+			<td style = 'text-align:center;'> </td>
+			<td>Defines a keyword. Can have an optional second
+			field with a value. These are not uploaded to Brightspace.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>keywords</td>
+			<td style = 'text-align:center;'> </td>
+			<td>Same as before, but several keywords can be
+			defined. No value will be associated with each keyword.</td>
+		</tr>
+	</table>
+	</body>
+</html>
+

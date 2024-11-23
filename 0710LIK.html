@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en-gb" data-lang-default="en-gb">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<title>Likert Questions</title>
+		<style>
+			html { font-size:20px; }
+		</style>
+	</head>
+	<body>
+	<h3>7.10 Likert Questions (LIK)</h3>
+	<p>Likert questions present a way to query the students' opinion. They are
+	unlike all other question types, in that they are not used to evaluate
+	students. As such, even though technically they have points and difficulty
+	associated with them, these values are ignored, and they cannot be used in
+	quizzes to evaluate the students. They are often used in Surveys instead.</p>
+
+	<p>The following is a simple example of a CSV file containing the definition
+	of a Likert question:</p>
+	<div style = 'text-align:center;'>
+		<iframe style = 'display: inline-block; width:80%;'
+		type="text/plain" src="../../templates/lik_2_Complete.txt"></iframe>
+	</div>
+
+	<p>The fields that can be specified are as follows:</p>
+	<table>
+		<tr style = 'vertical-align: top;'>
+			<th>Field</th><th>Mandatory</th><th>Description</th>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>questiontype</td>
+			<td style = 'text-align:center;'> x </td>
+			<td>Must be the first specified field. It states the type of the question.
+			"LIK", "Likert" or "Likert Question" are all accepted.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>title</td>
+			<td style = 'text-align:center;'> </td>
+			<td>The title of the question.
+			Defaults to "questiontitle".</td>
+		</tr><tr style = 'vertical-align: top;'>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>isbonus</td>
+			<td style = 'text-align:center;'> </td>
+			<td>If this is a bonus question (yes) or not (no). Default no "no".</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>ismandatory</td>
+			<td style = 'text-align:center;'> </td>
+			<td>If this is a mandatory question (yes) or not (no). Default no "yes".</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>text</td>
+			<td style = 'text-align:center;'> x </td>
+			<td>The text of the question. Must be contained within
+			double quotes, if extending more than one line, or if containing commas.
+			Can include HTML formatting.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>image</td>
+			<td style = 'text-align:center;'> </td>
+			<td>Insert an image at the start of the question.
+			Specifies a single field, which is the image location.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>option</td>
+			<td style = 'text-align:center;'> x </td>
+			<td>Text of one of the options the student is presented
+			with. At least one is required.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>scale</td>
+			<td style = 'text-align:center;'> </td>
+			<td>The scale to use (defaults to onetofive). Options are:
+			<ul>
+				<li>"onetofive": 1, 2, 3, 4, 5;</li>
+				<li>"shortagreementna": Disagree, Neutral, Agree, N/A;</li>
+				<li>"frequency": Never, Rarely, Occasionally, Regularly, Always;</li>
+				<li>"onetoeight": 1, 2, 3, 4, 5, 6, 7, 8;</li>
+				<li>"agreementna": same as ``agreement'', with N/A;</li>
+				<li>"agreement": Strongly Disagree, Disagree, Neutral, Agree, Strongly Agree;</li>
+				<li>"satisfaction": Very Dissatisfied, Dissatisfied, Neutral, Satisfied, Very Satisfied;</li>
+				<li>"importance": Very Unimportant, Unimportant, Neutral, Important, Very Important;</li>
+				<li>"opposition": Strongly Oppose, Oppose, Undecided, Support, Strongly Support;</li>
+				<li>"onetofivena": 1, 2, 3, 4, 5, N/A;</li>
+				<li>"onetoeightna": 1, 2, 3, 4, 5, 6, 7, 8, N/A;</li>
+				<li>"satisfactionna": same as ``satisfaction'', with N/A;</li>
+				<li>"frequencyna": same as ``frequency'', with N/A;</li>
+				<li>"importancena": same as ``importance'', with N/A;</li>
+				<li>"oppositionna": same as ``opposition'', with N/A;</li>
+				<li>"onetoten": 1, 2, 3, 4, 5, 6, 7, 8, 9, 10;</li>
+				<li>"onetotenna": 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, N/A.</li>
+			</ul></td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>feedback</td>
+			<td style = 'text-align:center;'> </td>
+			<td>Feedback to show to the students. Can include HTML formatting.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>keyword</td>
+			<td style = 'text-align:center;'> </td>
+			<td>Defines a keyword. Can have an optional second
+			field with a value. These are not uploaded to Brightspace.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>keywords</td>
+			<td style = 'text-align:center;'> </td>
+			<td>Same as before, but several keywords can be
+			defined. No value will be associated with each keyword.</td>
+		</tr>
+	</table>
+	</body>
+</html>
+

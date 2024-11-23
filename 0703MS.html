@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en-gb" data-lang-default="en-gb">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<title>Multi-Select Questions</title>
+		<style>
+			html { font-size:20px; }
+		</style>
+	</head>
+	<body>
+	<h3>7.3 Multi-Select Questions (MS)</h3>
+	<p>Multi-Select questions present a list of items to the student, from which
+	they should choose one or more correct ones (or a pre-defined number of choices,
+	if the <i>score</i> field is set to "limited").</p>
+
+	<p>The following is a simple example of a CSV file containing the definition
+	of a Multi-Select question:</p>
+	<div style = 'text-align:center;'>
+		<iframe style = 'display: inline-block; width:80%;'
+		type="text/plain" src="../../templates/ms_2_Complete.txt"></iframe>
+	</div>
+
+	<p>The fields that can be specified are as follows:</p>
+	<table>
+		<tr style = 'vertical-align: top;'>
+			<th>Field</th><th>Mandatory</th><th>Description</th>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>questiontype</td>
+			<td style = 'text-align:center;'> x </td>
+			<td>Must be the first specified field. It states the type of the question.
+			"MS", "Multi-Select" or "Multi Select Question" are all accepted.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>title</td>
+			<td style = 'text-align:center;'> </td>
+			<td>The title of the question.
+			Defaults to "questiontitle".</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>weighting</td>
+			<td style = 'text-align:center;'> </td>
+			<td>The score of the question, between 0 and 9999. Defaults to 1.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>difficulty</td>
+			<td style = 'text-align:center;'> </td>
+			<td>The difficulty of the question (1-5).
+			Defaults to 1.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>isbonus</td>
+			<td style = 'text-align:center;'> </td>
+			<td>	If this is a bonus question (yes) or not (no). Default no "no".</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>ismandatory</td>
+			<td style = 'text-align:center;'> </td>
+			<td>If this is a mandatory question (yes) or not (no). Default no "yes".</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>text</td>
+			<td style = 'text-align:center;'> x </td>
+			<td>The text of the question. Must be contained within
+			double quotes, if extending more than one line, or if containing commas.
+			Can include HTML formatting.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>shuffle</td>
+			<td style = 'text-align:center;'> </td>
+			<td>Whether the possible answer choices are shown in a
+			shuffled order or not ("yes" or "no"). Defaults to yes.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>score</td>
+			<td style = 'text-align:center;'> x </td>
+			<td>The scoring approach to use; must be specified
+			before adding possible selections. A single field is expected, with one
+			of the following possible specifications:
+			<ul>
+				<li>"equal": the total points for the
+				question are equally distributed among each of the selections;</li>
+				<li>"all": all-or-nothing, i.e. the student must choose
+				all the correct selections to receive the full question marks;</li>
+				<li>"rmw": right-minus-wrong: same as "equal", but
+				with negative scoring; zero is the minimum score (e.g. if there
+				were four matching options, and one was correct and three
+				incorrect, the total score would be 0 points).</li>
+				<li>"limited": the total points for the
+				question are distributed across correct answers only, and the
+				number of selections allowed is limited to the number of correct
+				answers.</li>
+			</ul></td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>selection</td>
+			<td style = 'text-align:center;'> x </td>
+			<td>A possible selection. At least one must be
+			specified. Contains two fields: a digit (1 or 0), signifying whether
+			this is a correct selection or not, and its text.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>enumeration</td>
+			<td style = 'text-align:center;'> </td>
+			<td>The type of enumeration shown next to each option:<br/>
+			1 = 1,2,3,4,5; 2 = i,ii,iii,iv,v; 3 = I,II,III,IV,V; 4 = a,b,c,d,e;
+			5 = A,B,C,D,E; 6 = none.</td>
+		<!--</tr><tr style = 'vertical-align: top;'>
+			<td>style</td>
+			<td style = 'text-align:center;'> </td>
+			<td>How to display selections:
+			"horizontal" or "vertical".</td>-->
+		</tr><tr style = 'vertical-align: top;'>
+			<td>hint</td>
+			<td style = 'text-align:center;'> </td>
+			<td>A hint shown to the students when answering the
+			question in a quiz. Can include HTML formatting.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>feedback</td>
+			<td style = 'text-align:center;'> </td>
+			<td>Feedback to show to the students, when
+			visualising their test and answers after taking the test (it is
+			not shown during test taking). Can include HTML formatting.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>keyword</td>
+			<td style = 'text-align:center;'> </td>
+			<td>Defines a keyword. Can have an optional second
+			field with a value. These are not uploaded to Brightspace.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>keywords</td>
+			<td style = 'text-align:center;'> </td>
+			<td>Same as before, but several keywords can be
+			defined. No value will be associated with each keyword.</td>
+		</tr>
+	</table>
+	</body>
+</html>
+

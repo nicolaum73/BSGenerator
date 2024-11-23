@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en-gb" data-lang-default="en-gb">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<title>Creating Equations</title>
+		<style>
+			html { font-size:20px; }
+		</style>
+	</head>
+	<body>
+	<h3>8.3 Creating Equations</h3>
+	Brightspace can easily convert latex equations into MathML for display, and
+	BSGenerator provides the same funcionality. The following CSV file illustrates
+	several ways in which equations can be incorporated into a question:
+	<div style = 'text-align:center;'>
+		<iframe style = 'display: inline-block; width:80%;'
+		type="text/plain" src="../../templates/mat_4_Latex_Equations.txt"></iframe>
+	</div>
+
+	<p>To create inline equations (i.e. equations that typically have text around them,
+	but also simple equations), place the corresponding latex equation code
+	between "\\(" and "\\)" tokens. If creating full equations (i.e. equations that
+	are typically centered on their own in a line of text, usually complex equations),
+	place the latex equation code between "\\[" and \\]" tokens, or between
+	"$$" tokens.<br/>
+	Note any backslash must be "escaped" with another backslash, hence using "\\[" and
+	"\\]" as tokens. This also applies to equation code, such as "\\sqrt". Finally, if
+	your latex equation code is inside a Python string, use raw strings to ensure that
+	backslashes are not interpreted as Python string escaping characters.
+	The following CSV definition gives an example:
+
+	<div style = 'text-align:center;'>
+	<p><textarea readonly rows = 10 style = 'width:75%;'>
+%%import random%%
+%%x = random.randint(-5, 5)%%
+%%eq = r"\\(\\sqrt{" + str(x) + r"}\\)"%%
+questiontype,tf
+text,Is %%eq%% a real value?
+true,%%100 if x &gt;= 0 else 0%%
+false,%%100 if x &lt; 0 else 0%%</textarea></p>
+	</div>
+
+	<p style = 'text-decoration: underline;'>latex2mathml</p>
+
+	<p>BSGenerator versions prior to v1.1 suggested the use of this Python library
+	for generation of equations. While it technically will still work, its use is
+	discouraged from v1.1 onwards.</p>
+	</body>
+</html>
+

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en-gb" data-lang-default="en-gb">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<title>True/False Questions</title>
+		<style>
+			html { font-size:20px; }
+		</style>
+	</head>
+	<body>
+	<h3>7.1 True/False Questions (TF)</h3>
+	<p>True-False questions are like a simplified version of Multiple-Choice questions,
+	where there are only two possible choices, True or False. Typically one of these is
+	incorrect, and the other correct.</p>
+
+	<p>The following is a simple example of a CSV file containing the definition
+	of a True/False question:</p>
+	<div style = 'text-align:center;'>
+		<iframe style = 'display: inline-block; width:80%;'
+		type="text/plain" src="../../templates/tf_2_Complete.txt"></iframe>
+	</div>
+
+	<p>The fields that can be specified are as follows:</p>
+	<table>
+		<tr style = 'vertical-align: top;'>
+			<th>Field</th><th>Mandatory</th><th>Description</th>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>questiontype</td>
+			<td style = 'text-align:center;'>x</td>
+			<td>Must be the first specified field.
+			It states the type of the question. "TF", "True-False",
+			"True False Question" and other variations are all accepted.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>title</td>
+			<td style = 'text-align:center;'> </td>
+			<td>The title of the question. Defaults to "questiontitle".</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>weighting</td>
+			<td style = 'text-align:center;'> </td>
+			<td>The score of the question, between 0 and 9999. Defaults to 1.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>difficulty</td>
+			<td style = 'text-align:center;'> </td>
+			<td>The difficulty of the question (1-5).
+			Defaults to 1.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>isbonus</td>
+			<td style = 'text-align:center;'> </td>
+			<td>If this is a bonus question (yes) or not (no). Defaults no "no".</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>ismandatory</td>
+			<td style = 'text-align:center;'> </td>
+			<td>If this is a mandatory question (yes) or not (no). Defaults to "yes".</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>text</td>
+			<td style = 'text-align:center;'> x </td>
+			<td>The text of the question. Must be contained within
+			double quotes, if extending more than one line, or if containing commas.
+			Can include HTML formatting.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>true</td>
+			<td style = 'text-align:center;'>x</td>
+			<td>Defines the percentage of the question score that the
+			student will get, if he chooses True. Can have an optional second field
+			defining the feedback shown to the student at the end of the test, for
+			this option.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>false</td>
+			<td style = 'text-align:center;'>x</td>
+			<td>Defines the percentage of the question score that the
+			student will get, if he chooses False. Can have an optional second field
+			defining the feedback shown to the student at the end of the test, for
+			this option.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>enumeration</td>
+			<td style = 'text-align:center;'> </td>
+			<td>The type of enumeration shown next to each option:<br/>
+			1 = 1,2,3,4,5; 2 = i,ii,iii,iv,v; 3 = I,II,III,IV,V; 4 = a,b,c,d,e;
+			5 = A,B,C,D,E; 6 = none.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>hint</td>
+			<td style = 'text-align:center;'> </td>
+			<td>A hint shown to the students when answering the
+			question in a quiz. Can include HTML formatting.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>feedback</td>
+			<td style = 'text-align:center;'> </td>
+			<td>Feedback to show to the students, when
+			visualising their test and answers after taking the test (it is
+			not shown during test taking). Can include HTML formatting.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>keyword</td>
+			<td style = 'text-align:center;'> </td>
+			<td>Defines a keyword. Can have an optional second
+			field with a value. These are not uploaded to Brightspace.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>keywords</td>
+			<td style = 'text-align:center;'> </td>
+			<td>Same as before, but several keywords can be
+			defined. No value will be associated with each keyword.</td>
+		</tr>
+	</table>
+	</body>
+</html>
+

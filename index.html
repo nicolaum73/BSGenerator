@@ -1,1 +1,77 @@
-<h1>hello</h1>
+<!doctype html>
+<html lang="en-gb" data-lang-default="en-gb">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<title>BSGenerator Help</title>
+		<style>
+			html { font-size:20px; }
+		</style>
+		<link rel="icon" type="image/x-icon" href="images/favicon.ico">
+	</head>
+	<body>
+	<p><h1 style = 'text-align:center;'>BSGenerator <span id="version"></span></h1></p>
+	<script>
+		const urlParams = new URLSearchParams(window.location.search);
+		const version = urlParams.get('version');
+		document.getElementById("version").innerHTML = version;
+	</script>
+	<p style = 'text-align:center;'>
+		<img style = 'display: inline-block; width:15%;' src = 'images/BSGeneratorLogo.png'/>
+	</p>
+	<p><h2 style = 'text-align:center;'>User Guide</h2></p>
+	<p>
+	BSGenerator is a software suite meant to aid the generation of quizzes for
+	Virtual Learning Environments such as Brightspace, Blackboard, Moodle, etc. It
+	is in an experimental research state, and very much work in progress.
+	</p>
+	<h2>Table of contents</h2>
+	</p>
+	<p><a href = '0100Overview.html'>1. Overview</a></p>
+	<p>&ensp;<a href = '0100Overview.html#1.1'>1.1 BSManager vs. BSEditor</a></p>
+	<p>&ensp;<a href = '0100Overview.html#1.2'>1.2 Brightspace</a></p>
+	<p>&emsp;<a href = '0100Overview.html#1.2.1'>1.2.1 Quizzes</a></p>
+	<p>&emsp;<a href = '0100Overview.html#1.2.2'>1.2.2 CSV Format</a></p>
+	<p>&emsp;<a href = '0100Overview.html#1.2.3'>1.2.3 QTI Format</a></p>
+	<p><a href = '0200Installation.html'>2. Installation</a></p>
+	<p>&ensp;<a href = '0200Installation.html#2.1'>2.1 MacOS</a></p>
+	<p>&ensp;<a href = '0200Installation.html#2.2'>2.2 Windows</a></p>
+	<p>&ensp;<a href = '0200Installation.html#2.3'>2.3 Uninstall</a></p>
+	<p><a href = '0300BSManager.html'>3. BSManager</a></p>
+	<p><a href = '0400BSManagerMainFunctions.html'>4. BSManager Main Functions</a></p>
+	<p><a href = '0500BSEditor.html'>5. BSEditor</a></p>
+	<p>&ensp;<a href = '0500BSEditor.html#5.1'>5.1 Question Editor</a></p>
+	<p>&ensp;<a href = '0500BSEditor.html#5.2'>5.2 Question Preview</a></p>
+	<p>&ensp;<a href = '0500BSEditor.html#5.3'>5.3 Log Display</a></p>
+	<p>&ensp;<a href = '0500BSEditor.html#5.4'>5.4 Button Toolbar</a></p>
+	<p><a href = '0600BSEditorMainFunctions.html'>6. BSEditor Main Functions</a></p>
+	<p>&ensp;<a href = '0600BSEditorMainFunctions.html#6.1'>6.1 Creating Questions</a></p>
+	<p>&ensp;<a href = '0600BSEditorMainFunctions.html#6.2'>6.2 Opening Questions</a></p>
+	<p>&ensp;<a href = '0600BSEditorMainFunctions.html#6.3'>6.3 Importing Questions</a></p>
+	<p>&ensp;<a href = '0600BSEditorMainFunctions.html#6.4'>6.4 Exporting QTI Packages</a></p>
+	<p>&ensp;<a href = '0600BSEditorMainFunctions.html#6.5'>6.5 Previewing Questions</a></p>
+	<p>&ensp;<a href = '0600BSEditorMainFunctions.html#6.6'>6.6 Inspecting XML Code</a></p>
+	<p>&ensp;<a href = '0600BSEditorMainFunctions.html#6.7'>6.7 Inspecting CSV Code</a></p>
+	<p>&ensp;<a href = '0600BSEditorMainFunctions.html#6.8'>6.8 Inspecting Python Namespaces</a></p>
+	<p>&ensp;<a href = '0600BSEditorMainFunctions.html#6.9'>6.9 Export/Clear Log</a></p>
+	<p>&ensp;<a href = '0600BSEditorMainFunctions.html#6.10'>6.10 Settings</a></p>
+	<p>&ensp;<a href = '0600BSEditorMainFunctions.html#6.11'>6.11 Help</a></p>
+	<p>&ensp;<a href = '0600BSEditorMainFunctions.html#6.12'>6.12 Quit</a></p>
+	<p><a href = '0700BSGeneratorCSVformat.html'>7. BSGenerator CSV Format</a></p>
+	<p>&ensp;<a href = '0701TF.html'>7.1 True/False Questions (TF)</a></p>
+	<p>&ensp;<a href = '0702MC.html'>7.2 Multiple-Choice Questions (MC)</a></p>
+	<p>&ensp;<a href = '0703MS.html'>7.3 Multi-Select Questions (MS)</a></p>
+	<p>&ensp;<a href = '0704WR.html'>7.4 Written Response Questions (WR)</a></p>
+	<p>&ensp;<a href = '0705SA.html'>7.5 Short Answer Questions (SA)</a></p>
+	<p>&ensp;<a href = '0706MSA.html'>7.6 Multi Short Answer Questions (MSA)</a></p>
+	<p>&ensp;<a href = '0707FIB.html'>7.7 Fill-in-the-Blanks Questions (FIB)</a></p>
+	<p>&ensp;<a href = '0708MAT.html'>7.8 Matching Questions (MAT)</a></p>
+	<p>&ensp;<a href = '0709ORD.html'>7.9 Ordering Questions (ORD)</a></p>
+	<p>&ensp;<a href = '0710LIK.html'>7.10 Likert Questions (LIK)</a></p>
+	<p><a href = '0800BSGeneratorCSVFormatAdvancedUse.html'>8. BSGenerator CSV Format Advanced Use</a></p>
+	<p>&ensp;<a href = '0801Files.html'>8.1 Inclusion of Files/Images</a></p>
+	<p>&ensp;<a href = '0802Python.html'>8.2 Use of Python Code</a></p>
+	<p>&ensp;<a href = '0803Equations.html'>8.3 Creating Equations</a></p>
+	</p>
+	</body>
+</html>
+

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en-gb" data-lang-default="en-gb">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<title>Inclusion of Files/Images</title>
+		<style>
+			html { font-size:20px; }
+		</style>
+	</head>
+	<body>
+	<h3>8.1 Inclusion of Files/Images</h3>
+	<p>The "text" field of questions, when written in HTML, can make reference to
+	images and/or support files. For example, the following CSV file shows an SA
+	question, linking to a datafile, and also including an image:</p>
+	<div style = 'text-align:center;'>
+		<iframe style = 'display: inline-block; width:80%;'
+		type="text/plain" src="../../templates/sa_5_Include_Files.txt"></iframe>
+	</div>
+
+	<p>Files linked from the HTML code will be automatically included in the zip
+	archive, and thus uploaded to Brightspace; they will be located in the root
+	folder of the module, unless specified otherwise (see
+	<a href = '0600BSEditorMainFunctions.html#6.4'>Exporting QTI Packages</a>).
+	This is the case with <i>example_data.xlsx</i> and <i>example_image.png</i>, above.</p>
+
+	<p>If relative folders are specified, such as in <i>data/example_excel.xlsx</i>,
+	then a folder named "data" is created in Brightspace (if it is not already
+	present), and the files will be uploaded into that folder.</p>
+
+	<p>Note that uploading files <b>will</b> overwrite files with the same name
+	in Brightspace. However, if a folder with the same name already exists, then it
+	is not overwritten, and files already inside it in Brightspace are kept (unless
+	new versions with the same name are included in the zip archive). More
+	details on how images/attachments are handled are given <a href = '0600BSEditorMainFunctions.html#6.10'>here</a>.</p>
+
+	<p>An example of good practice is to place files specific to a question in
+	their own folder (e.g. "correlation_question/example_data.xlsx"), to avoid
+	accidentally replacing files with the same name from other questions. This
+	practice will also help the deletion of support files related to a specific
+	question: just delete the related folder (e.g. "correlation_question").
+	In Brightspace, this can be reached through "Module Tools" / "Module Admin" /
+	"Manage Files" (deleting questions in Brightspace does not delete corresponding
+	referenced files).</p>
+
+	<p>Note that any fields accepting HTML code ("text", "feedback", "response",
+	"answerkey", etc) will have their links processed this way, and can be used
+	to include files in the zip archive for later upload to Brightspace.</p>
+
+	<p>Finally, make sure that any HTML web links used open in a new window/tab, by
+	using <i>target='_blank'</i>.</p>
+	</body>
+</html>
+

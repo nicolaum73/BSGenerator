@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en-gb" data-lang-default="en-gb">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<title>Written Response Questions</title>
+		<style>
+			html { font-size:20px; }
+		</style>
+	</head>
+	<body>
+	<h3>7.4 Written Response Questions (WR)</h3>
+	<p>Written-Response (or Long Answer) questions are essay-type questions,
+	in which the student is asked to write a short, medium or long text-based
+	answer. Contrary to all other question types, these questions are not
+	auto-correctable, and as such no correct (or incorrect) answer is
+	provided.</p>
+
+	<p>The following is a simple example of a CSV file containing the definition
+	of a Written Response question:</p>
+	<div style = 'text-align:center;'>
+		<iframe style = 'display: inline-block; width:80%;'
+		type="text/plain" src="../../templates/wr_2_Complete.txt"></iframe>
+	</div>
+
+	<p>The fields that can be specified are as follows:</p>
+	<table>
+		<tr style = 'vertical-align: top;'>
+			<th>Field</th><th>Mandatory</th><th>Description</th>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>questiontype</td>
+			<td style = 'text-align:center;'> x </td>
+			<td>Must be the first specified field. It states the type of the question.
+			"MS", "Multi-Select" or "Multi Select Question" are all accepted.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>title</td>
+			<td style = 'text-align:center;'> </td>
+			<td>The title of the question.
+			Defaults to "questiontitle".</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>weighting</td>
+			<td style = 'text-align:center;'> </td>
+			<td>The score of the question, between 0 and 9999. Defaults to 1.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>difficulty</td>
+			<td style = 'text-align:center;'> </td>
+			<td>The difficulty of the question (1-5).
+			Defaults to 1.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>isbonus</td>
+			<td style = 'text-align:center;'> </td>
+			<td>If this is a bonus question (yes) or not (no). Default no "no".</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>ismandatory</td>
+			<td style = 'text-align:center;'> </td>
+			<td>If this is a mandatory question (yes) or not (no). Default no "yes".</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>text</td>
+			<td style = 'text-align:center;'> x </td>
+			<td>The text of the question. Must be contained within
+			double quotes, if extending more than one line, or if containing commas.
+			Can include HTML formatting.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>blank</td>
+			<td style = 'text-align:center;'> </td>
+			<td>Optional field to specify the dimensions of the
+			text-entry box. Defaults to 100 columns and 15 rows.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>htmleditor</td>
+			<td style = 'text-align:center;'> </td>
+			<td>Whether to provide the student with a fully
+			featured HTML editor ("yes"), or just a plain text box ("no"). </td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>fileupload</td>
+			<td style = 'text-align:center;'> </td>
+			<td>Whether to provide the student the ability to
+			attach files and images ("yes"), or not ("no"). </td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>initialtext</td>
+			<td style = 'text-align:center;'> </td>
+			<td>The initial text inside the answer box,
+			i.e.~before the student writes anything.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>answerkey</td>
+			<td style = 'text-align:center;'> </td>
+			<td>Text shown to evaluators, when correcting
+			the question. Can include HTML formatting.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>hint</td>
+			<td style = 'text-align:center;'> </td>
+			<td>A hint shown to the students when answering the
+			question in a quiz. Can include HTML formatting.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>feedback</td>
+			<td style = 'text-align:center;'> </td>
+			<td>Feedback to show to the students, when
+			visualising their test and answers after taking the test (it is
+			not shown during test taking). Can include HTML formatting.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>keyword</td>
+			<td style = 'text-align:center;'> </td>
+			<td>Defines a keyword. Can have an optional second
+			field with a value. These are not uploaded to Brightspace.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>keywords</td>
+			<td style = 'text-align:center;'> </td>
+			<td>Same as before, but several keywords can be
+			defined. No value will be associated with each keyword.</td>
+		</tr>
+	</table>
+	</body>
+</html>
+

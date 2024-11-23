@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en-gb" data-lang-default="en-gb">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<title>Main Functions</title>
+		<style>
+			html { font-size:20px; }
+		</style>
+		<script>
+			function set_rnd(){
+				d = new Date()
+				v = ('' + (d.getMonth() + 1)).padStart(2,'0')
+				w = ('' + d.getDate()).padStart(2,'0')
+				x = ('' + (d.getHours() + 1)).padStart(2,'0')
+				y = ('' + (d.getMinutes() + 1)).padStart(2,'0')
+				z = Math.floor(10000000 + Math.random() * 89999999)
+				str = d.getFullYear() + v + w + '_' + x + y + '_' + z
+				document.getElementById('rnd_name').innerHTML = str
+			}
+		</script>
+	</head>
+	<body onload = 'set_rnd()'>
+	<h2>6. BSEditor Main Functions</h2>
+
+	<h3 id = '6.1'>6.1 Creating Questions</h3>
+	<p>The main functionality of BSEditor is to create Brightspace quiz
+	questions. These are created using the <a href = '0700BSGeneratorCSVformat.html'>extended
+	CSV format</a>. You can either create new questions, or open one of the provided
+	question templates (from File / New from Template).</p>
+
+	<h3 id = '6.2'>6.2 Opening Questions</h3>
+	<p>You can open existing questions written using the BSGenerator
+	<a href = '0700BSGeneratorCSVformat.html'>extended CSV format</a>. Please note
+	that questions written using the Brightspace import CSV format will not work in
+	BSGenerator. If instead you want to open QTI questions, see below how to
+	<a href = '0600BSEditorMainFunctions.html#6.3'>import QTI questions</a>.</p>
+
+	<h3 id = '6.3'>6.3 Importing Questions</h3>
+	<p>Questions created in Brightspace and exported as QTI packages can be imported
+	into BSGenerator. To export a question (or a set of questions) in Brightspace, go to
+	"Module Tools" / "Module Admin", then choose "Import / Export / Copy Components":</p>
+	<p style = 'text-align:center;'>
+		<img style = 'display: inline-block; width:50%;' src = 'images/bs_export1.png'/>
+	</p>
+	Choose "Export as Brightspace Package":
+	<p style = 'text-align:center;'>
+		<img style = 'display: inline-block; width:50%;' src = 'images/bs_export2.png'/>
+	</p>
+	<p>Then select what you would like to export from the Question Library
+	("Export all items" or "Select individual items to export"); select "Include
+	module files in the export package" if the questions have images/files; and
+	finally press "Export" After a short period of time, Brightspace will provide
+	you with a link to download the QTI package.</p>
+	<p>To import a question contained in a Brightspace QTI package onto BSEditor,
+	choose File / QTI Import (or the corresponding shortcut button).
+	After choosing the file, you will be presented with the QTI Import dialog:
+	<p style = 'text-align:center;'>
+		<img style = 'display: inline-block; width:75%; height:auto' src = 'images/qti_import.png'/>
+	</p>
+	<p>Here you can choose an existing question inside the QTI package, and
+	import it as a BSGenerator-compliant CSV file, along with any
+	images/attachments that the question may have.</p>
+
+	<h3 id = '6.4'>6.4 Exporting QTI Packages</h3>
+	<p>Once a question is ready for deployment, you can export it, i.e. create a QTI
+	Package that contains the question. You must preview the question first, as this
+	ensures that the specification is correct, and also enables you to see the exact
+	question(s) that will be uploaded to Brightspace.<br/>
+ 	To export the question, choose the menu option "File" / "QTI Export", or use its
+	shortcut button. This will bring up the QTI Export dialog, shown below.</p>
+	<p style = 'text-align:center;'>
+		<img style = 'display: inline-block; width:50%;' src = 'images/qti.png'/>
+	</p>
+	<p>If you just want to export a single question, uncheck all options, press Export,
+	and choose where to save the resulting QTI package.
+	Any exporting errors will be shown in the Log Display.<br/>
+	You can also specify the following parameters:
+	<ul>
+		<li><b>Question Section</b>:<br/>
+		You may choose for the exported question(s) to reside inside a section,
+		which will be created when you upload the package to Brightspace; the
+		question (or question variations) will reside in that top-level section.
+		Note that if a section with that name already exists, a new section with the
+		same name will be created (i.e. this option cannot be used to place questions
+		inside existing sections in Brightspace).
+		You can set the following Section settings (all of these can later be changed
+		inside Brightspace):<br/>
+		<ul>
+			<li>Use question title as section name, i.e. set the name of the
+			section to be the same as the question title, as specified in the
+			CSV file.</li>
+			<li>Hide section title from learners.</li>
+			<li>Shuffle section contents.</li>
+		</ul></li>
+		<li><b>Title</b>:<br/>
+		If you are exporting more than one run of the question (set through the
+		spin box in the button bar), then the following option may be of use:
+		<ul>
+			<li>Add counter suffix to variation(s) title: add a counter
+			suffix (e.g. 001, 002, etc) to the title of each question included in
+			the QTI package, to uniquely identify these afterwards.</li>
+		</ul></li>
+		<li><b>Attachments</b>:<br/>
+		If you want to upload images and/or attachments to Brightspace, you
+		need to be careful. If you upload a QTI package containing a file named
+		"plot.png" and that file already exists in Brightspace,
+		<u>the new file will overwrite the existing one in Brightspace</u>.
+		This can have the undesired effect of changing questions that already
+		exist in Brightspace. To mitigate this, a few options are provided:
+		<ul>
+			<li>Create a sub-folder for attachments. You can choose to create a
+			sub-folder that will include all your question images, attachments,
+			etc. This folder will be created in Brightspace's file section, and
+			your question(s) will link to files inside that folder.</li>
+			<li>Mirror section folders. You can give the attachment
+			folder the same name as the question title, but note that some
+			characters are not allowed (space, quotes, asterisk, slash, backslash, etc).</li>
+			<li>Use unique names for images and files. If the attachment
+			folder specified already exists in Brightspace, all attached files will
+			overwrite existing files with the same name in Brightspace. To
+			avoid this, images and attachments can be given unique names (e.g.
+			an image called "plot.png" can be renamed to something like
+			"<span id = 'rnd_name'></span>_plot.png", when uploaded to Brightspace).</li>
+		</ul></li>
+	</ul>
+	</p>
+
+	<h3 id = '6.5'>6.5 Previewing Questions</h3>
+	<p>When editing questions, it is useful to preview how they will look in
+	Brightspace. BSEditor provides this functionality.
+	This doubles up as a "compilation attempt" i.e. checking if the CSV
+	specifications will create a valid question (or set of questions).</p>
+	<p style = 'text-align:center;'>
+		<img style = 'display: inline-block; width:75%; height:auto' src = 'images/qpreview.png'/>
+	</p>
+	<p>Some extra information (not shown to students) is also displayed:
+	<ul>
+		<li>The <b>Total Score</b> of the current answer: this is a dynamic display, and will
+		be updated when the answer changes (very useful to try answers when developing a question);</li>
+		<li>The <b>Correct answer(s)</b>;</li>
+		<li>The <b>Question Feedback</b> (potentially shown to students at the end of the quiz);</li>
+		<li>The <b>Item Feedback</b> (depending on the question type; shown as above).</li>
+	</ul>
+	</p>
+	<p>When developing questions containing Python code, you can run the code several
+	times, to generate different <a>question variations</a>.
+	You can choose the number of times to compile a question variation using the
+	selector in the <a href = '0500BSEditor.html#5.4'>Button Toolbar</a>. The
+	navigation buttons in the top-right corner of the
+	<a href = '0500BSEditor.html#5.2'>Question Preview</a> pane will then allow you
+	to preview each question variation.</p>
+
+	<h3 id = '6.6'>6.6 Inspecting XML Code</h3>
+	<p>The application provides a means to inspect the resulting question database,
+	which will be incorporated into the QTI package. The XML preview window
+	allows the user to inspect the generated XML code, prior to exporting.</p>
+	<p style = 'text-align:center;'>
+		<img style = 'display: inline-block; width:75%;' src = 'images/xml.png'/>
+	</p>
+
+	<h3 id = '6.7'>6.7 Inspecting CSV Code</h3>
+	<p>If you use Python code in your question definitions, the code is executed
+	first, and then the resulting CSV definition is used to create a question.
+	It is sometimes useful to carefully check that the resulting CSV definition
+	is what you intended; the CSV Preview window provides
+	this functionality. If more than one question variation was generated, you can
+	inspect each resulting CSV definition, using the navigation buttons.</p>
+	<p style = 'text-align:center;'>
+		<img style = 'display: inline-block; width:75%;' src = 'images/csv.png'/>
+	</p>
+
+	<h3 id = '6.8'>6.8 Inspecting Python Namespaces</h3>
+	<p>If you use Python code in your question definitions, you can inspect the values
+	of local/global variables used in your code. This may be useful when debugging
+	code. To this end, BSEditor provides a Python Namespace visualiser.
+	It also allows for the namespaces to be erased.</p>
+	<p style = 'text-align:center;'>
+		<img style = 'display: inline-block; width:75%;' src = 'images/ns.png'/>
+	</p>
+
+	<h3 id = '6.9'>6.9 Export/Clear Log</h3>
+	<p>Exporting the log is a feature existing mostly for application debugging
+	purposes, whereas clearing the log can be used mainly for data privacy reasons.
+	Both the Export and Clear options are accessible through the
+	Tools menu, or by using the corresponding shortcut buttons.</p>
+
+	<h3 id = '6.10'>6.10 Settings</h3>
+	<p>You can configure many aspects of the application using the settings window.
+	These settings are groupped into three main sections (tabs):</p>
+	<ul>
+		<li><b>General</b><br/>
+		This section allows you to specify alternative locations for the cache and log
+		files used by BSGenerator, and also configure how those two files are used:<br/>
+		<ul>
+			<li>Cache<br/>
+			The cache file contains metadata and previews of all files opened with
+			BSGenerator/BSEditor.  You can monitor how much information/space it uses,
+			set a maximum size for it, optimise it (remove files/folders that no longer exist),
+			and choose whether BSEditor can work in tandem with BSGenerator to update the cache.
+			</li>
+			<li>Event Log<br/>
+			As specified, the <a href = '0500BSEditor.html#5.3'>Event Log</a> helps keep track
+			of all operations done with BSGenerator/BSEditor. You can monitor its size, set a
+			maximum number of events log, and resize it.
+			</li>
+		<p style = 'text-align:center;'>
+			<img style = 'display: inline-block; width:75%;' src = 'images/settings_general.png'/>
+		</p>
+		</ul>
+		<li><b>Python</b><br/>
+		This section lets you specify whether you want to use a specific Python interpreter
+		or the one supplied with BSEditor, specify a timeout for Python compilations, and
+		specify the maximum number of threads to use for parallel compilations.
+		<p style = 'text-align:center;'>
+			<img style = 'display: inline-block; width:75%;' src = 'images/settings_python.png'/>
+		</p>
+		<li><b>Display</b><br/>
+		This section allows setting font sizes for all text windows, whether to use
+		syntax highlighting in the question editor, and a zoom factor for the question
+		preview display.
+		<p style = 'text-align:center;'>
+			<img style = 'display: inline-block; width:75%;' src = 'images/settings_display.png'/>
+		</p>
+	</ul>
+
+	<h3 id = '6.11'>6.11 Help</h3>
+	<p>BSGenerator contains extensive documentation (the pages you are now reading).
+	These are available directly from both BSGenerator and BSEditor.</p>
+
+	<h3 id = '6.12'>6.12 Quit</h3>
+	<p>The Quit option closes the BSEditor window, and either returns to BSGenerator
+	(if BSEditor was launched from within it) or quits the application.</p>
+
+	</body>
+</html>
+

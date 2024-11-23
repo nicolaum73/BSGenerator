@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en-gb" data-lang-default="en-gb">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<title>CSV Format</title>
+		<style>
+			html { font-size:20px; }
+		</style>
+	</head>
+	<body>
+	<h2>7. BSGenerator CSV Format</h2>
+	<p>A CSV file describing a question can have different fields, depending on the
+	question type. This section describes the formats of CSV files for the
+	question types supported by BSGenerator. Note that, when uploading
+	questions to Brightspace, no existing questions will be overlapped, whether
+	they were created there, or previously uploaded. BSGenerator can only be used
+	to upload new questions, and it will never modify/overlap existing questions in
+	the Brightspace; images and/or files used with questions may however overwrite
+	existing ones in Brightspace (see <a href = '0600BSEditorMainFunctions.html#6.10'>Settings</a>).</p>
+
+	<p>In other to maintain compatibility between Windows and Mac computers, a standard
+	way to specify paths had to be chosen; the choice is to use forward slashes. So
+	when specifying paths (e.g. for images in the question text), specify them such
+	as <i>C:/Program Files/image name.jpg</i>.</p>
+
+	<p>All field definitions can be contained within double quotes.
+	If you need to use the double quote character in a field, then do not surround
+	that definition with double quotes (e.g. using <i>text,"The Text"</i> will
+	generate the question text as <b>The Text</b>, whereas <i>text,The "Text"</i>
+	will generate <b>The "Text"</b>).
+
+	<p>Note that Brightspace updates their formats quite regularly, so some
+	functionality provided by the application may not work in the future.
+	For example, Brightspace allows the insertion of an image at the start of some
+	question types; this is replicated by the <i>image</i> field.
+	However, this functionality is limited (images are always shown at the start of
+	the question, and in their maximum size). Brightspace seems to be slowly
+	removing this, in favour of simply inserting images with HTML code within the
+	text of questions.</p>
+
+	<p>&ensp;<a href = '0701TF.html'>7.1 True/False Questions (TF)</a></p>
+	<p>&ensp;<a href = '0702MC.html'>7.2 Multiple-Choice Questions (MC)</a></p>
+	<p>&ensp;<a href = '0703MS.html'>7.3 Multi-Select Questions (MS)</a></p>
+	<p>&ensp;<a href = '0704WR.html'>7.4 Written Response Questions (WR)</a></p>
+	<p>&ensp;<a href = '0705SA.html'>7.5 Short Answer Questions (SA)</a></p>
+	<p>&ensp;<a href = '0706MSA.html'>7.6 Multi Short Answer Questions (MSA)</a></p>
+	<p>&ensp;<a href = '0707FIB.html'>7.7 Fill-in-the-Blanks Questions (FIB)</a></p>
+	<p>&ensp;<a href = '0708MAT.html'>7.8 Matching Questions (MAT)</a></p>
+	<p>&ensp;<a href = '0709ORD.html'>7.9 Ordering Questions (ORD)</a></p>
+	<p>&ensp;<a href = '0710LIK.html'>7.10 Likert Questions (LIK)</a></p>
+	</body>
+</html>
+

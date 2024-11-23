@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en-gb" data-lang-default="en-gb">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<title>Multiple-Choice Questions</title>
+		<style>
+			html { font-size:20px; }
+		</style>
+	</head>
+	<body>
+	<h3>7.2 Multiple-Choice Questions (MC)</h3>
+	<p>Multiple-Choice questions are by far the most commonly used type of question
+	in online tests. They are similar to True-False questions, but can have any
+	number of possible choices.</p>
+
+	<p>The following is a simple example of a CSV file containing the definition
+	of a Multiple-Choice question:</p>
+	<div style = 'text-align:center;'>
+		<iframe style = 'display: inline-block; width:80%;'
+		type="text/plain" src="../../templates/mc_2_Complete.txt"></iframe>
+	</div>
+
+	<p>The fields that can be specified are as follows:</p>
+	<table>
+		<tr style = 'vertical-align: top;'>
+			<th>Field</th><th>Mandatory</th><th>Description</th>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>questiontype</td>
+			<td style = 'text-align:center;'> x </td>
+			<td>Must be the first specified field. It states the type of the question.
+			``MC'', ``Multiple Choice'' or
+			``Multiple Choice Question'' are all accepted.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>title</td>
+			<td style = 'text-align:center;'> </td>
+			<td>The title of the question.
+			Defaults to "questiontitle".</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>weighting</td>
+			<td style = 'text-align:center;'> </td>
+			<td>The score of the question, between 0 and 9999. Default to 1.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>difficulty</td>
+			<td style = 'text-align:center;'> </td>
+			<td>The difficulty of the question (1-5).
+			Defaults to 1.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>isbonus</td>
+			<td style = 'text-align:center;'> </td>
+			<td>If this is a bonus question (yes) or not (no). Default no "no".</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>ismandatory</td>
+			<td style = 'text-align:center;'> </td>
+			<td>If this is a mandatory question (yes) or not
+			(no). Default no "yes".</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>text</td>
+			<td style = 'text-align:center;'> x </td>
+			<td>The text of the question. Must be contained within
+			double quotes, if extending more than one line, or if containing commas.
+			Can include HTML formatting.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>shuffle</td>
+			<td style = 'text-align:center;'> </td>
+			<td>Whether the possible answer choices are shown in a
+			shuffled order or not (``yes'' or ``no''). Defaults to yes.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>choice</td>
+			<td style = 'text-align:center;'> x </td>
+			<td>Possible MCQ choice. You must define at least one
+			(but probably four or more). It defines the score first, followed by
+			the label that appears to the student. Note that the score is a
+			percentage of the question score (defined with <i>weighting</i>, but
+			possibly overridden in quizzes). There is no limit to the number of
+			possible answers, although too many may become hard to visualise. Use
+			one <i>choice</i> definition per possible answer. Can include HTML
+			formatting.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>enumeration</td>
+			<td style = 'text-align:center;'> </td>
+			<td>The type of enumeration shown next to each option:<br/>
+			1 = 1,2,3,4,5; 2 = i,ii,iii,iv,v; 3 = I,II,III,IV,V; 4 = a,b,c,d,e;
+			5 = A,B,C,D,E; 6 = none.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>hint</td>
+			<td style = 'text-align:center;'> </td>
+			<td>A hint shown to the students when answering the
+			question in a quiz. Can include HTML formatting.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>feedback</td>
+			<td style = 'text-align:center;'> </td>
+			<td>Feedback to show to the students, when
+			visualising their test and answers after taking the test (it is
+			not shown during test taking). Can include HTML formatting.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>keyword</td>
+			<td style = 'text-align:center;'> </td>
+			<td>Defines a keyword. Can have an optional second
+			field with a value. These are not uploaded to Brightspace.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>keywords</td>
+			<td style = 'text-align:center;'> </td>
+			<td>Same as before, but several keywords can be
+			defined. No value will be associated with each keyword.</td>
+		</tr>
+	</table>
+	</body>
+</html>
+

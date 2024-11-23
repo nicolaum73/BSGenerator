@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en-gb" data-lang-default="en-gb">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<title>Ordering Questions</title>
+		<style>
+			html { font-size:20px; }
+		</style>
+	</head>
+	<body>
+	<h3>7.9 Ordering Questions (ORD)</h3>
+	<p>Ordering questions present a list of items to the student; for each item, an
+	order (from a drop-down box) must be selected. They are like <a href = '0708MAT.html'>Matching</a>
+	questions, except that the possible answers are 1, 2, ..., <i>n</i>, where <i></i> is
+	the number of items presented.</p>
+
+	<p>The following is a simple example of a CSV file containing the definition
+	of an Ordering question:</p>
+	<div style = 'text-align:center;'>
+		<iframe style = 'display: inline-block; width:80%;'
+		type="text/plain" src="../../templates/ord_2_Complete.txt"></iframe>
+	</div>
+
+	<p>The fields that can be specified are as follows:</p>
+	<table>
+		<tr style = 'vertical-align: top;'>
+			<th>Field</th><th>Mandatory</th><th>Description</th>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>questiontype</td>
+			<td style = 'text-align:center;'> x </td>
+			<td>Must be the first specified field. It states the type of the question.
+			"ORD", "Ordering" or "Ordering Question" are all accepted.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>title</td>
+			<td style = 'text-align:center;'> </td>
+			<td>The title of the question.
+			Defaults to "questiontitle".</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>weighting</td>
+			<td style = 'text-align:center;'> </td>
+			<td>The score of the question, between 0 and 9999. Defaults to 1.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>difficulty</td>
+			<td style = 'text-align:center;'> </td>
+			<td>The difficulty of the question (1-5).
+			Defaults to 1.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>isbonus</td>
+			<td style = 'text-align:center;'> </td>
+			<td>If this is a bonus question (yes) or not (no). Default no "no".</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>ismandatory</td>
+			<td style = 'text-align:center;'> </td>
+			<td>If this is a mandatory question (yes) or not (no). Default no "yes".</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>text</td>
+			<td style = 'text-align:center;'> x </td>
+			<td>The text of the question. Must be contained within
+			double quotes, if extending more than one line, or if containing commas.
+			Can include HTML formatting.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>image</td>
+			<td style = 'text-align:center;'> </td>
+			<td>Insert an image at the start of the question.
+			Specifies a single field, which is the image location.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>item</td>
+			<td style = 'text-align:center;'> x </td>
+			<td>Defines one of the items to sort; at least one must
+			be defined. It requires two fields: the correct order for this item
+			(1-<i>n</i>, where <i>n</i> is the number of items defined), and the text of the
+			item.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>score</td>
+			<td style = 'text-align:center;'> x </td>
+			<td>The scoring approach to use. A single field is
+			expected, with one of the following specifications:
+			<ul>
+				<li>"equal": the total points for the question are
+				equally distributed among each of the items to order;</li>
+				<li>"all": all-or-nothing, i.e. the student must order all
+				the items correctly to receive the overall points assigned to
+				this question;</li>
+				<li>right-minus-wrong: same as "equal", but
+				with negative scoring; zero is the minimum score (e.g.if there
+				were four ordering items, and one was correct and three
+				incorrect, the total score would be 0 points).</li>
+			</ul></td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>hint</td>
+			<td style = 'text-align:center;'> </td>
+			<td>A hint shown to the students when answering the
+			question in a quiz. Can include HTML formatting.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>feedback</td>
+			<td style = 'text-align:center;'> </td>
+			<td>Feedback to show to the students, when
+			visualising their test and answers after taking the test (it is
+			not shown during test taking). Can include HTML formatting.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>keyword</td>
+			<td style = 'text-align:center;'> </td>
+			<td>Defines a keyword. Can have an optional second
+			field with a value. These are not uploaded to Brightspace.</td>
+		</tr><tr style = 'vertical-align: top;'>
+			<td>keywords</td>
+			<td style = 'text-align:center;'> </td>
+			<td>Same as before, but several keywords can be
+			defined. No value will be associated with each keyword.</td>
+		</tr>
+	</table>
+	</body>
+</html>
+

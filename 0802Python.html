@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en-gb" data-lang-default="en-gb">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+		<title>Use of Python Code</title>
+		<style>
+			html { font-size:20px; }
+		</style>
+	</head>
+	<body>
+	<h3>8.2 Use of Python Code</h3>
+	<p>The input CSV files can contain Python code, which is executed prior to parsing
+	the CSV fields. This allows the generation of several variations of the question,
+	which will all be included in the single zip package.</p>
+
+	<h4 id = '8.2.1'>8.2.1 Main Procedure</h4>
+	To understand how to incorporate Python code in your questions, take the
+	following CSV file, showing an MC question containing Python code:</p>
+	<div style = 'text-align:center;'>
+		<iframe style = 'display: inline-block; width:80%;'
+		type="text/plain" src="../../templates/mc_4_All_of_the_above.txt"></iframe>
+	</div>
+
+	<p>Python code must always be contained within "%%" tokens. Before the file is
+	parsed as a CSV file, the Python code is executed, and the output of the
+	code between the %% tokens (if any) is appended onto the CSV specification.</p>
+
+	<p>The example given generates a question that asks for either an example of
+	quantitative data, or of qualitative data. It starts by importing the Python
+	package <i>random</i>. Then it declares two lists, of quantitative and
+	qualitative data examples, and a third list <i>a</i> (for answer), which
+	contains a random quantitative example followed by a random qualitative
+	example. Finally, it declares the two possible questions in the list <i>q</i>
+	(ask for "quantitative" or "qualitative" example), and a random variable
+	to choose it.</p>
+
+	<p>In the question text, it inserts the chosen random question (the type of data
+	from which to ask for an example). Finally, in the responses, it inserts either
+	100 or 0 as a score, depending on the question asked, for each of the chosen
+	random data examples. Since "shuffle,no" was specified, we can set the
+	third and fourth responses as (all of the above)" and "(none of the above)".</p>
+
+	To generate several versions of this question, set the required <b>Number of
+	question variations</b> in the <a href = '0500BSEditor.html#5.4'>Button Toolbar</a>,
+	and then press the <b>Preview</b> button.
+
+	<h4 id = '8.2.2'>8.2.2 Implementation Details</h4>
+
+	<p style = 'text-decoration: underline;'>Including Values in Question</p>
+
+	<p>The execution of Python code works by attempting first to pass each full
+	sequence of code (text between "%%" tokens) to <i>eval()</i> (which
+	evaluates code and returns its value), and if that fails, then pass it to
+	<i>exec()</i> (which executes code, but does not return anything). This
+	means that the following code will not do what it seems:</p>
+
+	<div style = 'text-align:center;'>
+	<p><textarea readonly rows = 10 style = 'width:75%;'>
+%%s = True%%
+response,100,%%if s:
+  'Green'
+else:
+  'Blue'%%</textarea></p>
+	</div>
+
+	<p>Full if-statements will make <i>eval()</i> fail, so
+	the if-statement will be passed to <i>exec()</i>, which does not
+	return anything. This means that the CSV field would become
+	"response,100,", which is an incomplete CSV field definition.</p>
+
+	<p>To solve this, you can declare a function to execute the required logic,
+	returning the value to be incorporated, and use the function call to insert
+	the value, as in:</p>
+
+	<div style = 'text-align:center;'>
+	<p><textarea readonly rows = 10 style = 'width:75%;'>
+%%def colour(s):
+  if s:
+    return 'Green'
+  else:
+    return 'Blue'%%
+%%s = True%%
+response,100,%%colour(s)%%</textarea></p>
+	</div>
+
+	<p>Even better, if the logic to execute is fairly simple, use a one-line segment
+	that returns a value (such as one-line if-statements, list comprehensions,
+	etc):</p>
+
+	<div style = 'text-align:center;'>
+	<p><textarea readonly rows = 10 style = 'width:75%;'>
+%%s = True%%
+response,100,%%'Green' if s else 'Blue'%%</textarea></p>
+	</div>
+
+	<p>Finally, you can use the <i>print()</i> function to print statements to the
+	log, when compiling a question; this is useful for debugging proposes. But
+	<b>do not use the <i>print()</i> function to try to incorporate text into
+	the question; it will merely print it to the log.</b>
+
+	<h4 id = '8.2.3'>8.2.3 Variable Scope</h4>
+
+	<p>Variables used within Python code in questions exist only during the
+	compilation phase of the question, and are immediately deleted afterwards.
+	In some cases though, it might be interesting to share variable values between
+	different executions (or "question runs").</p>
+
+	<p>One such example is to use a variable that sequentially increases its value,
+	for each question variation generated. This can be done by declaring variables
+	global, and checking if they have already been declared, as shown below;
+	the first question variation will ask for the name of the number 1, then
+	the number 2, etc.</p>
+	<div style = 'text-align:center;'>
+		<iframe style = 'display: inline-block; width:80%;'
+		type="text/plain" src="../../templates/wr_4_Global_Variable.txt"></iframe>
+	</div>
+
+	<p><b>Use the <i>globals()</i> trick with caution. Global variables will
+	remain in memory for subsequent runs of this question. Use the
+	<a href = '0600BSEditorMainFunctions.html#6.8'>Python Namespaces</a> visualiser
+	to reset local and global variables.</b>
+
+	<h4 id = '8.2.4'>8.2.4 Choosing Python interpreter</h4>
+
+	<p>BSGenerator can run your own Python code directly, which means that you
+	do not need to install Python in your system to use the functionality of
+	generating question variations.</p>
+
+	<p>However, in some cases, you may want to use a Python library not included with
+	the BSGenerator distribution (e.g. <i>Numpy</i> or <i>Pandas</i>). If you wish to use your
+	own system's Python interpreter (and its libraries), then choose to do so in
+	the application's <a href = '0600BSEditorMainFunctions.html#6.10'>Settings</a>.
+
+	<b>Note that using the BSGenerator built-in Python interpreter can slow things down.
+	Always try to use your own system Python, before using the built-in interpreter.</b>
+
+	<p style = 'text-decoration: underline;'>Endless Python Loop</p>
+
+	<p>You are free to include whichever Python code you want, in your CSV definitions.
+	It might happen, under certain conditions, that your code will never terminate,
+	such as in the following example; this effectively locks the application,
+	not allowing you to do anything else.
+
+	<div style = 'text-align:center;'>
+	<p><textarea readonly rows = 10 style = 'width:75%;'>
+%%while True:
+  continue
+%%
+questiontype,tf
+text,Is this statement true or false?
+true,100
+false,0</textarea></p>
+	</div>
+
+	In order to avoid this, there are two possibilities. One is to use the
+	<a href = '0600BSEditorMainFunctions.html#6.10'>setting</a> that automatically
+	cancels Python code execution after a given amount of time. Another is to
+	manually cancel the code execution; to do so, a small cross appears in the
+	top right corner of the log window, allowing you to cancel the Python
+	execution whenever it is active.
+	</body>
+</html>
+
