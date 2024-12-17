@@ -38,23 +38,21 @@ html {
 
 
 #div_nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: right;
+    display: inline-block;
     padding-right: calc(1px + 3.0vw);
     text-align: right;
     span{
-        padding-right: calc(-2px + .3vw);
+        padding-right: calc(-4px + .4vw);
     }
     a.nav_button{
-        padding: calc(3px + .5vw) calc(5px + .5vw);
+        padding: calc(2px + .5vw) calc(2px + .5vw);
         background-color: transparent;
         color: #007BFF;
         border: none;
         border-radius: 12px;
         cursor: pointer;
         text-align: center;
-        font-size: calc(10px + .5vw);
+        font-size: calc(8px + .6vw);
         text-decoration: none;
     }
     a.nav_button:hover{
