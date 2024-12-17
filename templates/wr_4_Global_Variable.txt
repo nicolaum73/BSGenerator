@@ -1,0 +1,10 @@
+%%global nbr; nbr = nbr + 1 if "nbr" in globals() else 0%%
+%%systems = ('Circulatory', 'Digestive', 'Endocrine',
+'Excretory', 'Immune', 'Integumentary', 'Muscular',
+'Nervous', 'Reproductive', 'Respiratory', 'Skeletal')%%
+questiontype,WR
+title,"Describe the %%systems[nbr % len(systems)]%% System"
+text,"List the organs of the human body that are part of the
+%%systems[nbr % len(systems)]%% System, and briefly describe
+the main function of the system."
+blank,100,5

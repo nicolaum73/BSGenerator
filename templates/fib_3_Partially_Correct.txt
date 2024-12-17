@@ -1,0 +1,23 @@
+%%
+import random
+import math
+nbr = random.randint(17,24)
+ln = round(math.log(nbr), 3)
+log10 = round(math.log(nbr, 10), 3)
+log2 = round(math.log(nbr, 2), 3)
+sqrt = round(math.sqrt(nbr), 3)
+%%
+questiontype,fib
+title,Natural logarithm and square root
+text,"The natural logarithm of %%nbr%% is"
+blank,5,1
+text,"; its square root is"
+blank,5,1
+# Scores for answers are from 0 to 100, which correspond to
+# a percentage of the question score (specified with the
+# weighting field). The maximum possible score should be 100.
+response,50,%%ln%%,nocase,1
+response,25,%%log10%%,nocase,1
+response,25,%%log2%%,nocase,1
+response,50,%%sqrt%%,nocase,2
+hint,"Use up to three decimal cases of precision."

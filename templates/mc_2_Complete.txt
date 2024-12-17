@@ -1,0 +1,18 @@
+questiontype,mc
+title,MC Example
+weighting,5
+difficulty,1
+isbonus,no
+ismandatory,no
+text,"Which of the following is not a fish?"
+choice,100,"Narwhal","Narwhals have warm blood, breathe air,
+and have no gills."
+choice,0,"Whale shark","Sharks (including whale sharks) have
+cold blood and gills, hence are fish."
+choice,0,"Eel","Eels are fish."
+choice,0,"Tuna","Tuna are fish."
+shuffle,yes
+enumeration,2
+hint,"Question hint"
+feedback,"Question feedback"
+keywords,biology,taxonomy,"animal kingdom"

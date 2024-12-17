@@ -1,0 +1,19 @@
+questiontype,fib
+title,Atomic Mass
+weighting,1
+difficulty,1
+# Fill-in-the-Blanks questions can have several answer-entry
+# zones with other text around them.
+text,"In terms of atomic mass, the smallest element is "
+# You can specify the number of lines and rows of each
+# answer area.
+blank,10,1
+# You must provide an answer for each blank, and the type of
+# matching used ('case' for case sensitive, 'nocase' for
+# case-insensitive, or 'regex' for regular expression).
+response,50,^[Hh](ydrogen)?$,regex,1
+text," whereas the largest (naturally occurring) element is "
+blank,5,1
+response,50,^[Uu](ranium)?$,regex,2
+hint,"Use either the chemical symbol or the full name of the element."
+keywords,atomic mass,elements,hydrogen,uranium

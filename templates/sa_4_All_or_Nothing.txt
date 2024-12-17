@@ -1,0 +1,13 @@
+questiontype,sa
+title,Ordering Roman Numerals
+text,"The following sequence contains four valid roman numerals.
+Write them down in the blanks provided, in anscending order
+(lowest value first).
+<p> IIV , CM , MCM , LIX , XL , 0 , LC , XD</p>"
+score,all
+blanks,4
+response,0,XL,nocase,1
+response,0,LIX,nocase,2
+response,0,CM,nocase,3
+response,0,MCM,nocase,4
+feedback,"XL = 40; LIX = 59; CM = 900; MCM = 1900."

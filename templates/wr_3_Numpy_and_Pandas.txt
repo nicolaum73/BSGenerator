@@ -1,0 +1,28 @@
+# Please note that numpy and pandas are not included with
+# BSGenerator. If you want to use these or other non-default
+# libraries, you need to set your own python interpreter in
+# the application settings.
+%%import numpy as np%%
+%%import pandas as pd%%
+%%data = {}
+data['City'] = np.random.choice(['Dublin', 'Cork'], 5)
+data['Area'] = np.random.uniform(50, 100, 5).round(2)
+data['Bedrooms'] = np.random.randint(1, 4, 5)
+data['BER rating'] = np.random.choice(list('ABCDE'), 5)
+data['Smart meter'] = np.random.choice([True, False], 5)
+x_vars = tuple(data.keys())
+data['Price'] = np.random.randint(40, 60, 5) * 10000%%
+%%df = pd.DataFrame(data)%%
+%%table = df.to_html(index = False, justify = 'center')
+table = table.replace("<table",
+"<table style='width: 75%; margin-left: auto; margin-right: auto'")
+table = table.replace('"',"'")%%
+questiontype,wr
+title,Apartment Prices
+weighting,5
+difficulty,1
+text,"<p>Given the apartments shown in the table below,
+describe the type of the variables %%x_vars%%, and how
+you would use them in a linear regression model to predict
+Price.</p>
+%%table%%"

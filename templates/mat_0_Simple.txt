@@ -1,0 +1,9 @@
+questiontype,mat
+text,"Choose the appropriate French translation for each of the words."
+answer,"Panser",1
+answer,"Penser",2
+answer,"Pincer",3
+question,"To dress a wound",1
+question,"To think",2
+question,"To pinch",3
+score,all

@@ -1,0 +1,20 @@
+questiontype,mat
+title,Famous equations
+weighting,2
+difficulty,2
+isbonus,no
+ismandatory,no
+text,"Match each equation with its corresponding name."
+answer,Einstein's Relativity,ein
+answer,Euler's Identify,euler
+answer,Schrodinger's Equation,schro
+answer,Navier-Stokes Equation,navier
+question,\\(E = mc^2\\),ein
+question,\\(e^{i\\pi} + 1 = 0\\),euler
+question,"\\[i \\hbar \\frac{\\partial}{\\partial t}\\Psi(\\mathbf{r},t) = \\hat H \\Psi(\\mathbf{r},t)\\]",schro
+question,"$$
+\\rho \\left( \\frac{\\partial v}{\\partial t} 
+ + v \\cdot \\nabla v 
+\\right) = -\\nabla p + \\nabla T \\cdot f
+$$",navier
+score,all

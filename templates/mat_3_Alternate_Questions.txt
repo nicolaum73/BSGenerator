@@ -1,0 +1,36 @@
+questiontype,mat
+weighting,1
+difficulty,1
+# If two or more questions evaluate similar content, it might
+# make sense to group them into a single csv specification,
+# and alternate between them for each variation created.
+#
+# For this, you can use a global variable to ensure that every
+# second question variation is different from the previous one.
+%%global question_number ; question_number = 1 if 'question_number' not in globals() else question_number + 1%%
+# 1st question variation: Vowel/Consonant
+%%if question_number % 2 == 0:
+    question = '''
+title,Vowel/Consonant
+text,"Match letters to type of letter:"
+answer,"Vowel",vowel
+answer,"Consonant",cons
+question,"a",vowel
+question,"s",cons
+question,"d",cons
+question,"f",cons'''
+# 2nd question variation: Even/Odd
+else:
+    question = '''
+title,Even/Odd
+text,"Match numbers to parity of number:"
+answer,"Odd",odd
+answer,"Even",even
+question,"1",odd
+question,"2",even
+question,"3",odd
+question,"4",even'''
+%%
+# Insert the chosen question
+%%question%%
+score,rmw

@@ -1,0 +1,20 @@
+questiontype,Short Answer
+title,Correlation between x and y
+# To include files or images, create a HTML link to the file
+# or image in the same directory where you saved the question.
+# In this example, replace BSGENERATORPATH/templates
+# with the path to both the file and the image. E.g.:
+# <a href='data.xlsx'>dataset</a>
+# <img src = 'plot.png'/>
+Text,"<p>Given the data in <a href='BSGENERATORPATH/templates/example_data.xlsx'>this
+file</a>, corresponding to the image below, what is the
+correlation between x and y?</p>
+<p style = 'text-align: center'>
+<img style='max-width: 50%' title='plot of x vs. y'
+src='BSGENERATORPATH/templates/example_image.png' alt='y increasing as x increases'/></p>"
+hint,"You may refer to the definition of
+<a href='https://en.wikipedia.org/wiki/Correlation'
+target='_blank'>Correlation</a>."
+response,100,^[0]*\.943[0-9]*$,regex
+feedback,"Use the formula =CORREL(A2:A11,B2:B11) in the
+Excel file to calculate the correlation."

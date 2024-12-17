@@ -1,0 +1,8 @@
+questiontype,tf
+title,Napoleon
+weighting,2
+difficulty,1
+text,Napoleon Bonaparte (Napoleon I) was left-handed.
+true,100
+false,0
+enumeration,3

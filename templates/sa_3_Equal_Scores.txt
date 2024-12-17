@@ -1,0 +1,10 @@
+questiontype,sa
+title,"Mean, Median, and Mode"
+text,"What is the value of the mean, median, and mode (in that order) of the following set?<br/>
+(1,17,24,2,6,3,2,8,18)"
+score,equal
+blanks,3
+response,33.333333333,^9(\.0*)?$,regex,1
+response,33.333333333,^6(\.0*)?$,regex,2
+response,33.333333333,^2(\.0*)?$,regex,3
+hint,"Type your answers with three decimal cases of precision (e.g. 3 is 3.000)"

@@ -1,0 +1,3 @@
+questiontype,sa
+text,Which is the capital of France?
+response,100,paris,nocase

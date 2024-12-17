@@ -1,0 +1,22 @@
+questiontype,ms
+title,MS Example
+weighting,10
+difficulty,2
+isbonus,no
+ismandatory,yes
+text,"Which of the following are Romance Languages?"
+score,equal
+selection,1,French,"Official language of France, Quebec,
+and other <em>francophone</em> regions."
+selection,1,Spanish,"Official language of Spain, and 20
+other countries."
+selection,1,Moldovan,"Unofficial name for the Romanian
+language, as spoken in Romania and Moldova."
+selection,0,Russian,"Official language of the Russian
+Federation, Belarus, Kazakhstan, and Kyrgyzstan."
+shuffle,yes
+enumeration,3
+hint,"Some languages have more than one name."
+feedback,"Moldovan is in fact the name given to the
+Romanian language, as spoken in Moldova."
+keyword,languages

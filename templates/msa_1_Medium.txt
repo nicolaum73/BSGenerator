@@ -1,0 +1,9 @@
+questiontype,msa
+title,Japanese characters
+weighting,4
+difficulty,1
+text,Give the name of two of the character sets used in the Japanese writing system.
+blanks,2,40,1
+response,50,Hiragana,nocase
+response,50,Katakana,nocase
+response,50,Kanji,nocase

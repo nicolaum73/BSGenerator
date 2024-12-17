@@ -1,0 +1,14 @@
+questiontype,ms
+title,Types of plots
+weighting,5
+difficulty,2
+# Note that linked images are not included in the QTI package.
+# You have to rely on the consistency of the link you
+# are providing to always provide the image.
+text,"<p style = 'text-align: center'><img src = 'https://upload.wikimedia.org/wikipedia/commons/0/01/Asymmetric_Distribution_with_Zero_Skewness.jpg' style='max-width: 75%;'/></p>
+Which plot type(s) is/are used in the figure above?"
+score,rmw
+selection,0,"Scatter plot."
+selection,0,"Pie chart."
+selection,1,"Histogram."
+selection,1,"Box whisker plot."

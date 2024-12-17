@@ -1,0 +1,20 @@
+questiontype,fib
+title,FIB example with regular expressions
+text,"Technically speaking, a sidereal year has "
+blank,5,1
+text," days."
+# Questions with blanks can have three kinds of specified
+# correct answers: 'case' for case-sensitive equal answers,
+# 'nocase' for case insensitive equal answers, and 'regex'
+# for answers matched using a regular expression.
+#
+# Regular expressions can match any subexpression in the
+# answer given, so you can use ^ to mark the start of the
+# answer text, and $ to mark the end. Note that spaces at
+# the start and end of regular expressions are always
+# ignored by Brightspace.
+response,100,^365.256(36)?$,regex,1
+response,50,^365.246$,regex,1
+response,50,^365.2425$,regex,1
+response,25,^365$,regex,1
+hint,"Use three decimal cases of precision."

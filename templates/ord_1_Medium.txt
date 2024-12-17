@@ -1,0 +1,16 @@
+questiontype,ord
+title,Carbon molecules in gas
+weighting,5
+difficulty,1
+isbonus,no
+ismandatory,no
+text,"Order the following gases, from the largest number
+of carbon molecules to the smallest."
+item,1,Butane,"C<sub>4</sub>H<sub>10</sub>"
+item,2,Propane,"C<sub>3</sub>H<sub>8</sub>"
+item,3,Ethane,"C<sub>2</sub>H<sub>6</sub>"
+item,4,Methane,"CH<sub>4</sub>"
+item,4,Carbon Dioxide,"CO<sub>2</sub>"
+score,rmw
+hint,"Choose the order from largest (1) to smallest (5). In
+the case of a tie, choose the same number for the tied items."

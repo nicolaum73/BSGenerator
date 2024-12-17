@@ -1,0 +1,16 @@
+questiontype,Matching
+title,Question Title
+weighting,1
+difficulty,1
+text,"<p>Match letters to type of letter:</p>"
+answer,"Vowel",vowel
+answer,"Consonant",cons
+answer,"Either",either
+question,"a",vowel
+question,"s",cons
+question,"d",cons
+question,"y",either
+score,rmw
+hint,"For each letter, choose its type (vowel or consonant)."
+feedback,"The letter 'y' can function as a vowel or a
+consonant, depending on the word."

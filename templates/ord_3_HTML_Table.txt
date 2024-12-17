@@ -1,0 +1,27 @@
+questiontype,ord
+title,Prominence of highest mountains
+weighting,1
+difficulty,1
+text,"Consider the five highest mountains in the world,
+listed below:<br/>
+<p style = 'text-align: center'>
+<table style='border-collapse: collapse; width: 50%; border-style: solid' border='1'>
+<tbody>
+<tr><th>Mountain</th><th>Height</th></tr>
+<tr><td>Mount Everest</td><td>8,848m</td></tr>
+<tr><td>K2</td><td>8,611m</td></tr>
+<tr><td>Kangchenjunga</td><td>8,586m</td></tr>
+<tr><td>Lhotse</td><td>8,516m</td></tr>
+<tr><td>Makalu</td><td>8,485m</td></tr>
+</tbody></table>
+</p>
+Order these in terms of prominence, from highest to lowest."
+score,equal
+item,1,Mount Everest
+item,2,K2
+item,3,Kangchenjunga
+item,4,Makalu
+item,5,Lhotse
+hint,"Prominence is not the same as altitude."
+feedback,"Of the top 100 highest mountains in the world, Mount
+Everest is the only one that does not have a parent mountain."

@@ -1,0 +1,12 @@
+questiontype,Short Answer
+title,Super Man Philosophy
+weighting,10
+difficulty,1
+Text,"Which philosopher described the concept of
+<b>Übermensch</b>?"
+# Use a regular expression (regex) to accept different answers:
+# Friedrich Nietzsche
+# friedrick Nietsche
+# Nietzsche
+# etc
+response,100,^([Ff]riedric[hk][ ]+)?[Nn]iet(z)?sche$,regex

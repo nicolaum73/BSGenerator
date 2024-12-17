@@ -1,0 +1,7 @@
+questiontype,mc
+text,"Which of the following martial arts was created
+in what is now the Okinawa prefecture in Japan?"
+choice,100,"Karate"
+choice,0,"Kung-Fu"
+choice,0,"Judo"
+choice,0,"Taekwondo"

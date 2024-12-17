@@ -1,0 +1,23 @@
+questiontype,wr
+title,Psychology of Social Media
+weighting,10
+difficulty,4
+isbonus,yes
+ismandatory,no
+text,"In your opinion, how does the use of social media
+influence self-esteem? Use the buttons below to upload an
+<b>audio</b> or <b>video</b> file with your answer."
+blank,100,50
+htmleditor,yes
+fileupload,yes
+initialtext,"Use the buttons below to upload your answer."
+answerkey,"Evaluation Criteria:<br/>
+<ul><li>Clarity and organization of ideas.</li>
+<li>Use of examples to support the opinion.</li>
+<li>Engagement and communication skills in the video.</li></ul>"
+hint,"Consider discussing how social media might enhance
+self-esteem through social connections or validation while
+also addressing its potential negative effects, such as
+comparison or cyberbullying."
+feedback,"Refer to the Social Media workshop notes."
+keywords,social media,self-esteem,psychology

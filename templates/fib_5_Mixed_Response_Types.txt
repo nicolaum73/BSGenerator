@@ -1,0 +1,13 @@
+questiontype,fib
+title,
+weighting,10
+difficulty,1
+Text,"What is the legal term for a written statement
+confirmed by oath, used as evidence in court?"
+blank,20
+# two accepted answers
+response,100,Affidavit,nocase
+response,100,Statutory,nocase
+# half-correct answers
+response,50,Testimony,nocase
+response,50,^[Aa]ffi.*$,regex

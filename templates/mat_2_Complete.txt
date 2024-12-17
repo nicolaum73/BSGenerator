@@ -1,0 +1,21 @@
+questiontype,mat
+title,MAT Example
+weighting,2
+difficulty,2
+isbonus,no
+ismandatory,no
+text,"Match tablet models with corresponding manufacturers."
+# With matching questions, you set up a set of possible
+# answers, and pose some questions, associating one of the
+# defined answers as the correct answer."
+answer,"Microsoft",msoft
+answer,"Samsung",ssung
+answer,"Apple",apple
+question,"Galaxy",ssung
+question,"Surface",msoft
+question,"iPad",apple
+question,"Tab A",ssung
+score,equal
+hint,"Choose the appropriate option from the dropdown box."
+feedback,"Samsung produces both the Galaxy and Tab A models."
+keywords,technology,tech,apple,samsung

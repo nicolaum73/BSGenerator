@@ -1,0 +1,15 @@
+questiontype,tf
+title,Colour of Ancient Statues
+weighting,5
+difficulty,1
+isbonus,no
+ismandatory,no
+text,"Ancient Greek and Roman statues were white."
+true,0,"feedback for true"
+false,100,"feedback for false"
+enumeration,1
+hint,"At the time of their creation."
+feedback,"Greek and Roman statues were usually painted in
+bright colours, but those pigments deteriorated over time."
+keyword,topic,"classical age"
+keywords,"greek empire","roman empire"

@@ -1,0 +1,44 @@
+%%import random%%
+# Lists of quantitative and qualitative data
+%%quant = ['3','9.5','12mm','6kg','12:56','0\'34\'\'17']%%
+%%quali = ['John Doe','red','Ireland','0 or more','diesel']%%
+# Possible MCQ choices
+%%choices = []%%
+# Randomly select two choices from the lists
+%%choices.append([0,random.choice(quant + quali)])%%
+%%choices.append([0,random.choice(quant + quali)])%%
+# Ensure the two choices are different
+%%while choices[1] == choices[0]:
+  choices[1] = [0,random.choice(quant + quali)]%%
+# Add all/none of the above at the end
+%%choices.append([0,'(all of the above)'])%%
+%%choices.append([0,'(none of the above)'])%%
+# Randomly select whether the question is about
+# quantitative or qualitative data
+%%q = random.choice(['quantitative','qualitative'])%%
+# Whether the first choice is quantitative
+%%quant1 = choices[0][1] in quant%%
+# Whether the second choice is quantitative
+%%quant2 = choices[1][1] in quant%%
+# Assign 100% to the correct choice
+%%if q == 'quantitative':
+  choices[0][0] = 100 if (quant1 and not quant2) else 0
+  choices[1][0] = 100 if (not quant1 and quant2) else 0
+  choices[2][0] = 100 if (quant1 and quant2) else 0
+  choices[3][0] = 100 if (not quant1 and not quant2) else 0
+else: # qualitative
+  choices[0][0] = 100 if (not quant1 and quant2) else 0
+  choices[1][0] = 100 if (quant1 and not quant2) else 0
+  choices[2][0] = 100 if (not quant1 and not quant2) else 0
+  choices[3][0] = 100 if (quant1 and quant2) else 0%%
+questiontype,Multiple Choice
+# do not shuffle the choices
+shuffle,no
+title,Quantitative vs. Qualitative data
+weighting,5
+difficulty,1
+text,Which of the following is an example of %%q%% data?
+choice,%%choices[0][0]%%,<b>%%choices[0][1]%%</b>
+choice,%%choices[1][0]%%,<b>%%choices[1][1]%%</b>
+choice,%%choices[2][0]%%,%%choices[2][1]%%
+choice,%%choices[3][0]%%,%%choices[3][1]%%

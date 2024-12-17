@@ -1,0 +1,18 @@
+questiontype,ord
+title,Empires by size
+weighting,5
+difficulty,1
+isbonus,no
+ismandatory,no
+text,"Order the following Empires from largest to smallest,
+at the peak of their extent."
+item,1,British Empire,"Largest in the year 1920."
+item,2,Mongol Empire,"Largest in the year 1270."
+item,3,Russian Empire,"Largest in the year 1895."
+item,4,Qing dynasty,"Largest in the year 1790."
+item,5,Spanish Empire,"Largest in the year 1810."
+score,rmw
+hint,"Choose the order from largest (1) to smallest (5)."
+feedback,"All of these controlled over 10% of the land area
+of the world."
+keyword,history

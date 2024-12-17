@@ -1,0 +1,6 @@
+questiontype,msa
+text,"In the Gregorian Calendar, which two months are named
+after Roman Emperors?"
+blanks,2
+response,50,July,nocase
+response,50,August,nocase

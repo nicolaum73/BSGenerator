@@ -1,0 +1,13 @@
+questiontype,ms
+title,Equally weighted MS options
+weighting,5
+difficulty,2
+text,Which of the following are the moons of Mars?
+score,limited
+selection,1,Phobos
+selection,1,Deimos
+selection,0,Io
+selection,0,Europa
+selection,0,Ganymede
+shuffle,yes
+feedback,"With 'limited' scoring set, the student is told the number of correct selections, and can only select at most that number of options. Each correct option adds up to the total score (e.g. in this example, each correctly selected option is worth 2.5 points)."

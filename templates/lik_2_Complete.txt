@@ -1,0 +1,12 @@
+questiontype,lik
+title,Student Supports
+isbonus,no
+ismandatory,no
+text,"<p>Throughout the course of this module, how important
+were the following?:</p>"
+scale,importancena
+option,"<p>E-mail communication</p>"
+option,"<p>Tutor Support</p>"
+option,"<p>Project Clinic</p>"
+feedback,Thank you for your feedback.
+keyword,"module feedback"

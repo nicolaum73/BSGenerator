@@ -1,0 +1,16 @@
+questiontype,Written Response
+title,Sustainable Urban Development
+weighting,10
+difficulty,1
+Text,"What are the main goals of sustainable urban development?"
+Hint,"Focus on balancing environmental, social, and economic
+factors in city planning."
+feedback,"Check chapter 1 of the textbook for more information."
+initialtext,Answer.
+answerkey,"A strong response should mention:<br/>
+<ul><li>Reducing environmental impact through resource
+efficiency and green spaces.</li>
+<li>Promoting social equity, including access to housing,
+transportation, and services.</li>
+<li>Encouraging economic growth that benefits all community
+members while preserving resources for future generations.</li></ul>"

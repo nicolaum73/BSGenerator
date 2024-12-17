@@ -1,0 +1,7 @@
+questiontype,Short Answer
+title,"Inches in a foot"
+weighting,10
+difficulty,1
+Text,"How many inches are in a foot?"
+response,100,12,nocase
+hint,"Provide a numeric answer."

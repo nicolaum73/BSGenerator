@@ -1,0 +1,13 @@
+questiontype,tf
+title,Logo of BSGenerator
+# To include an image, create a HTML link to the image
+# in the same directory where you saved the question.
+# In this example, replace BSGENERATORPATH/templates
+# with the path to the image.
+# e.g. <img src = 'logo.png' style='max-width: 25%;'/>
+text,"<p>The image below is the logo of BSGenerator:</p>
+<p style = 'text-align: center'>
+<img src = 'BSGENERATORPATH/templates/logo.png'
+style='max-width: 25%;'/></p>"
+true,100
+false,0

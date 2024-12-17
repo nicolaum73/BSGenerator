@@ -1,0 +1,17 @@
+questiontype,msa
+title,MSA Example
+weighting,10
+difficulty,3
+isbonus,no
+ismandatory,no
+text,"Give two examples of Irish provinces."
+blanks,2,20,1
+response,50,Connacht,nocase
+response,50,Leinster,nocase
+response,50,Munster,nocase
+response,50,Ulster,nocase
+hint,"Be careful with your spelling!"
+feedback,"There are four Irish provinces: Connacht, Leinster,
+Munster, and Ulster."
+keyword,country,Ireland
+keywords,Connacht,Leinster,Munster,Ulster

@@ -1,0 +1,8 @@
+questiontype,ms
+text,"Which of the following are examples of monetary
+policy tools?"
+score,all
+selection,1,Open market operations
+selection,1,Reserve requirements
+selection,0,Tax rate adjustments
+selection,0,Government spending

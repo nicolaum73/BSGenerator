@@ -1,0 +1,5 @@
+questiontype,fib
+text,"The original name of the supercontinent that existed
+over 200 million years ago was "
+blank,
+response,100,Pangaea,nocase

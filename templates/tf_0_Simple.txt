@@ -1,0 +1,4 @@
+questiontype,tf
+text,"The Earth is flat."
+true,0
+false,100

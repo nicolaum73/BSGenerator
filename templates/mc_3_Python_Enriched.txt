@@ -1,0 +1,47 @@
+# Python code can be used inside questions, to create
+# multiple variations of questions. To do so, surround
+# it with %% on either side. You can do this in 2 ways:
+# 1. Code execution, such as variable assignment,
+#    creates no output. Example:
+%%q = 'mc'%%
+# 2. Code evaluation, such as variable names, inserts
+#    the resulting value as a string into the question
+#    definition. Example (to set questiontype to mc):
+questiontype,%%q%%
+# Standard Python modules are provided with BSGenerator.
+# If you need a specific module, use your system's Python
+# interpreter (choose this option in the settings).
+%%import random%%
+# In this example question, we define two lists, of correct
+# and incorrect answers, fill them with as many elements as
+# possible, and then shuffle them:
+%%ok = []%%
+%%ok.append('Correct answer 1.')%%
+%%ok.append('Correct answer 2.')%%
+%%ok.append('Correct answer 3.')%%
+%%ok.append('Correct answer 4.')%%
+%%ok.append('Correct answer 5.')%%
+%%random.shuffle(ok)%%
+%%ko = []%%
+%%ko.append('Incorrect answer 1.')%%
+%%ko.append('Incorrect answer 2.')%%
+%%ko.append('Incorrect answer 3.')%%
+%%ko.append('Incorrect answer 4.')%%
+%%ko.append('Incorrect answer 5.')%%
+%%random.shuffle(ko)%%
+# Next we randomly choose what we are asking the student to
+# choose (i.e. is the right choice an element of the correct
+# or incorrect list?):
+%%qtext = random.choice(['correct','incorrect'])%%
+# If the right choice is an element of the incorrect list,
+# swap the ok and ko lists:
+%%if qtext == 'incorrect':
+    ok, ko = ko, ok%%
+# Finally, insert the chosen adjective in the question text.
+title,Example question with multiple variations
+text,"Which of the following is the %%qtext%% choice?"
+choice,100,"%%ok[0]%%"
+choice,0,"%%ko[0]%%"
+choice,0,"%%ko[1]%%"
+choice,0,"%%ko[2]%%"
+choice,0,"%%ko[3]%%"

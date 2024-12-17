@@ -1,0 +1,15 @@
+questiontype,ms
+title,MS Example
+weighting,4
+difficulty,2
+text,"Which are the file formats accepted for question upload
+by Brightspace?"
+score,rmw
+selection,1,CSV
+selection,1,QTI
+selection,0,XLS
+selection,0,JPG
+selection,0,HTML
+feedback,"Even though you can include HTML code in Brightspace
+CSV files, a pure HTML question definition is not accepted
+by Brightspace."

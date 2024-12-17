@@ -1,0 +1,13 @@
+questiontype,Fill in the Blanks
+title,Binary and Octal
+weighting,10
+difficulty,1
+text,"Binary code uses "
+blank,5
+response,40,2,nocase,1
+text," characters to represent numbers,
+whereas Octal code uses "
+blank,5
+response,60,8,nocase,2
+text,"characters."
+hint,"Use numerical answers."

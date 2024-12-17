@@ -1,0 +1,13 @@
+questiontype,Multiple Choice
+title,Where was BSGenerator created
+weighting,5
+difficulty,1
+text,"Where was BSGenerator originally created?"
+shuffle,yes
+choice,100,University College Dublin
+choice,0,Dublin City University
+choice,0,Trinity College Dublin
+choice,0,University of Limerick
+hint,"Its main campus is located in Belfield."
+feedback,"BSGenerator was originally created in 2020 by
+Dr. Miguel Nicolau at University College Dublin."

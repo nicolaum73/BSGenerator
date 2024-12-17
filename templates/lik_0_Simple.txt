@@ -1,0 +1,4 @@
+questiontype,lik
+text,"Within the context of online assessment:"
+scale,agreement
+option,"Online quizzes are effective tools."

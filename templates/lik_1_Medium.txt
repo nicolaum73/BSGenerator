@@ -1,0 +1,7 @@
+questiontype,lik
+title,Opinion poll
+text,Do you oppose or support the following?:
+scale,opposition
+option,Pineapple in pizza
+option,Milk in tea
+option,Vegan cheese
