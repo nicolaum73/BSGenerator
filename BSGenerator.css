@@ -59,14 +59,14 @@ html {
         background-color: #1767FF33;
     }
     a.dl_button {
-        padding: 8px calc(1px + .6vw);
+        padding: calc(1px + .6vw) calc(1px + .6vw);
         background-color: #1767FFFF;
         color: white;
         border: none;
         border-radius: 12px;
         cursor: pointer;
         text-align: center;
-        font-size: calc(10px + .5vw);
+        font-size: calc(9px + .6vw);
         text-decoration: none;
     }
     a.dl_button:hover {
@@ -156,7 +156,7 @@ body {
         text-align: left;
         display: inline;
         padding-left: calc(1px + 3.0vw);
-        font-size: calc(8px + .5vw);
+        font-size: calc(7px + .6vw);
         color: #007BFF;
         vertical-align: middle;
     }
@@ -165,7 +165,7 @@ body {
         align-items: center;
         display: inline;
         padding-left: calc(1px + 3.0vw);
-        font-size: calc(8px + .5vw);
+        font-size: calc(6px + .6vw);
         color: #007BFF;
         vertical-align: middle;
         padding-right: calc(1px + 3.0vw);
