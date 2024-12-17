@@ -21,7 +21,7 @@ html {
     display: inline-block;
     padding-left: calc(1px + 3.0vw);
     font-family: 'Verdana', sans-serif;
-    font-size: calc(8px + 1.4vw);
+    font-size: calc(10px + 1.2vw);
     font-weight: 700;
     color: #007BFF;
     text-align: left;
