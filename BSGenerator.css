@@ -38,7 +38,9 @@ html {
 
 
 #div_nav {
-    display: inline-block;
+    display: flex;
+    justify-content: space-between;
+    align-items: right;
     padding-right: calc(1px + 3.0vw);
     text-align: right;
     span{
