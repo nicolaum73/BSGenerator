@@ -21,7 +21,7 @@ html {
     display: inline-block;
     padding-left: calc(1px + 3.0vw);
     font-family: 'Verdana', sans-serif;
-    font-size: calc(10px + 1.2vw);
+    font-size: calc(8px + 1.3vw);
     font-weight: 700;
     color: #007BFF;
     text-align: left;
@@ -45,7 +45,7 @@ html {
         padding-right: calc(-4px + .4vw);
     }
     a.nav_button{
-        padding: calc(2px + .5vw) calc(2px + .5vw);
+        padding: 8px calc(1px + .6vw);
         background-color: transparent;
         color: #007BFF;
         border: none;
@@ -59,7 +59,7 @@ html {
         background-color: #1767FF33;
     }
     a.dl_button {
-        padding: calc(3px + .5vw) calc(8px + .5vw);
+        padding: 8px calc(1px + .6vw);
         background-color: #1767FFFF;
         color: white;
         border: none;
