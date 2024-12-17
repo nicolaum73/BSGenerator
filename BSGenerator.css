@@ -19,7 +19,7 @@ html {
 
 #div_navtitle {
     display: inline-block;
-    padding-left: calc(1px + 3.5vw);
+    padding-left: calc(1px + 3.0vw);
     font-family: 'Verdana', sans-serif;
     font-size: calc(8px + 1.4vw);
     font-weight: 700;
@@ -31,7 +31,7 @@ html {
         color: #007BFF;
     }
     img {
-        height: calc(20px + 1.5vw);
+        height: calc(16px + 1.5vw);
         vertical-align: middle;
     }
 }
@@ -39,13 +39,13 @@ html {
 
 #div_nav {
     display: inline-block;
-    padding-right: calc(1px + 3.5vw);
+    padding-right: calc(1px + 3.0vw);
     text-align: right;
     span{
         padding-right: calc(-2px + .3vw);
     }
     a.nav_button{
-        padding: calc(3px + .5vw) calc(8px + .5vw);
+        padding: calc(3px + .5vw) calc(5px + .5vw);
         background-color: transparent;
         color: #007BFF;
         border: none;
@@ -155,7 +155,7 @@ body {
         display: inline-block;
         text-align: left;
         display: inline;
-        padding-left: calc(1px + 3.5vw);
+        padding-left: calc(1px + 3.0vw);
         font-size: calc(8px + .5vw);
         color: #007BFF;
         vertical-align: middle;
@@ -164,11 +164,11 @@ body {
         display: flex;
         align-items: center;
         display: inline;
-        padding-left: calc(1px + 3.5vw);
+        padding-left: calc(1px + 3.0vw);
         font-size: calc(8px + .5vw);
         color: #007BFF;
         vertical-align: middle;
-        padding-right: calc(1px + 3.5vw);
+        padding-right: calc(1px + 3.0vw);
     }
 }
 
