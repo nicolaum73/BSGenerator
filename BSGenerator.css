@@ -20,6 +20,7 @@ html {
 #div_navtitle {
     display: inline-block;
     padding-left: calc(1px + 3.0vw);
+    padding-right: 2px;
     font-family: 'Verdana', sans-serif;
     font-size: calc(8px + 1.3vw);
     font-weight: 700;
