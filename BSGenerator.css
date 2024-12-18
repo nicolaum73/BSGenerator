@@ -46,7 +46,7 @@ html {
     padding-right: calc(-5px + 3.0vw);
     text-align: right;
     span{
-        padding-left: calc(-4px + .4vw);
+        padding-left: calc(-20px + 2vw);
     }
     a.nav_button{
         padding: 8px calc(1px + .6vw);
