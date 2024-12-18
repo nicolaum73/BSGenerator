@@ -34,6 +34,7 @@ html {
         height: calc(16px + 1.5vw);
         vertical-align: middle;
     }
+    background-image: linear-gradient(#FFFFFF, #AAAAAA);
 }
 
 
@@ -41,6 +42,7 @@ html {
     display: inline-block;
     padding-right: calc(1px + 3.0vw);
     text-align: right;
+    background-image: linear-gradient(#000000, #AAAAAA);
     span{
         padding-right: calc(-4px + .4vw);
     }
