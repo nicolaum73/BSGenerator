@@ -33,7 +33,7 @@ html {
         color: #007BFF;
     }
     img {
-        height: calc(16px + 1.5vw);
+        height: calc(10px + 1.8vw);
         vertical-align: middle;
     }
 }
