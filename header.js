@@ -2,7 +2,7 @@ var header = document.getElementById('header');
 header.innerHTML = `
 <div id = 'div_navtitle'>
     <a href = 'index.html'>
-        <img src = 'images/BSGeneratorLogo_6464.png'/>
+        <img src = 'images/BSGeneratorLogo_64x64.png'/>
         BSGenerator
     </a>
 </div>
