@@ -180,8 +180,8 @@ body {
     background-color: #1767FFFF;
     color: #FFFFFFFF;
     border: none;
-    padding: 10px 20px;
-    font-size: calc(8px + 1.7vw);
+    padding: calc(5px + 1.0vw) calc(10px + 1.0vw) ;
+    font-size: calc(4px + 2.0vw);
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
