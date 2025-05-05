@@ -181,7 +181,7 @@ body {
     color: #FFFFFFFF;
     border: none;
     padding: 10px 20px;
-    font-size: 24px;
+    font-size: calc(16px + 1.0vw);
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
